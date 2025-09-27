@@ -3,7 +3,7 @@
 - **Race:** Locathah
 - **Class:** Bard (College of Glamour)
 - **Background:** Joyful Shepherd (Custom)
-- **Alignment:** Lawful Good
+- **Alignment:** Neutral Good
 - **Inspiration:** Ted Lasso, Tom Bombadil, Michael (your brother)
 
 ---
