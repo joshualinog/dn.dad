@@ -1,0 +1,48 @@
+{
+  "name": "Sahar",
+  "race": "Astral Elf",
+  "class": "Rogue",
+  "subclass": "Arcane Trickster",
+  "level": 1,
+  "background": "Criminal/Spy",
+  "alignment": "Lawful Good",
+  "abilities": {
+    "strength": 7,
+    "dexterity": 16,
+    "constitution": 15,
+    "intelligence": 17,
+    "wisdom": 10,
+    "charisma": 13
+  },
+  "ac": 13,
+  "hp": 10,
+  "proficiencies": [
+    "Leather armor",
+    "Simple weapons",
+    "Hand crossbows",
+    "Longswords",
+    "Rapiers",
+    "Shortswords",
+    "Thieves' tools"
+  ],
+  "skills": [
+    "Deception",
+    "Insight",
+    "Investigation",
+    "Perception",
+    "Sleight of Hand",
+    "Stealth"
+  ],
+  "languages": ["Common", "Elvish", "Thieves' Cant"],
+  "equipment": [
+    "Leather armor",
+    "2 daggers",
+    "Thieves' tools",
+    "Burglar's pack",
+    "Light crossbow with 20 bolts"
+  ],
+  "spells": {
+    "cantrips": ["Sacred Flame"],
+    "level1": []
+  }
+}

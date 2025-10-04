@@ -1,0 +1,55 @@
+{
+  "name": "Dahg",
+  "race": "Locathah",
+  "class": "Bard",
+  "subclass": "College of Glamour",
+  "level": 1,
+  "background": "Joyful Shepherd",
+  "alignment": "Neutral Good",
+  "abilities": {
+    "strength": 14,
+    "dexterity": 17,
+    "constitution": 15,
+    "intelligence": 13,
+    "wisdom": 17,
+    "charisma": 18
+  },
+  "ac": 15,
+  "hp": 10,
+  "proficiencies": [
+    "Light armor",
+    "Simple weapons",
+    "Hand crossbows",
+    "Longswords",
+    "Rapiers",
+    "Shortswords",
+    "Banjo",
+    "Herbalism kit"
+  ],
+  "skills": [
+    "Performance",
+    "Persuasion",
+    "Insight",
+    "Sleight of Hand",
+    "Acrobatics",
+    "Deception",
+    "Perception"
+  ],
+  "languages": ["Common", "Aquan", "One additional"],
+  "equipment": [
+    "Leather armor",
+    "Rapier",
+    "Banjo",
+    "Diplomat’s pack",
+    "Herbalism kit",
+    "Hammock",
+    "Pouch of herbal teas",
+    "Simple clothes",
+    "Community token",
+    "15 gp"
+  ],
+  "spells": {
+    "cantrips": ["Vicious Mockery", "Friends", "Minor Illusion"],
+    "level1": ["Sleep", "Healing Word", "Charm Person", "Heroism"]
+  }
+}
