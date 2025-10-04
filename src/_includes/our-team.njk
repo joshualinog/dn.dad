@@ -1,16 +1,18 @@
 {% for character in characters %}
 <div class="flex-shrink max-w-full px-4 w-2/3 sm:w-1/2 md:w-5/12 lg:w-1/4 xl:px-6">
-    <div class="relative overflow-hidden bg-white dark:bg-gray-800 mb-12 hover-grayscale-0 wow fadeInUp" data-wow-duration="1s">
-        <div class="relative overflow-hidden px-6">
-            <img src="https://tailone.tailwindtemplate.net/src/img/dummy/avatar1.png" class="max-w-full h-auto mx-auto rounded-full bg-gray-50 grayscale" alt="title image">
-        </div>
-        <div class="pt-6 text-center">
-            <p class="text-lg leading-normal font-bold mb-1">{{ character.name }}</p>
-            <p class="text-gray-500 leading-relaxed font-light">{{ character.class }}{% if character.subclass %} ({{ character.subclass }}){% endif %}</p>
-            <div class="mt-2 mb-5 space-x-2">
-                <!-- Social icons or other info could go here -->
-            </div>
-        </div>
-    </div>
+    <a href="/characters/{{ character.name | slug }}/" class="block">
+      <div class="relative overflow-hidden bg-white dark:bg-gray-800 mb-12 hover-grayscale-0 wow fadeInUp" data-wow-duration="1s">
+          <div class="relative overflow-hidden px-6">
+              <img src="https://tailone.tailwindtemplate.net/src/img/dummy/avatar1.png" class="max-w-full h-auto mx-auto rounded-full bg-gray-50 grayscale" alt="title image">
+          </div>
+          <div class="pt-6 text-center">
+              <p class="text-lg leading-normal font-bold mb-1">{{ character.name }}</p>
+              <p class="text-gray-500 leading-relaxed font-light">{{ character.class }}{% if character.subclass %} ({{ character.subclass }}){% endif %}</p>
+              <div class="mt-2 mb-5 space-x-2">
+                  <!-- Social icons or other info could go here -->
+              </div>
+          </div>
+      </div>
+    </a>
 </div>
 {% endfor %}
