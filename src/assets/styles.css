@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Rubik Black for h1 */
+.rubik-black {
+	font-family: 'Rubik', ui-sans-serif, system-ui, sans-serif;
+	font-weight: 900;
+}

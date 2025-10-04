@@ -1,0 +1,5 @@
+- [x] Project scaffolded for Eleventy + Tailwind + GitHub Pages + custom domain.
+- [x] CNAME passthrough and asset path gotchas solved in config and templates.
+- [x] Sample README, workflow, and starter content included.
+- [ ] Install dependencies and run build to verify setup.
+- [ ] Replace placeholder domain in CNAME and update README as needed.
