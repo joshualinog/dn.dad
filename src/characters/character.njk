@@ -26,44 +26,16 @@ layout: layout.njk
     <div class="text-pink-600 font-bold">{{ character.subclass }}</div>
   </div>
 
-  <!-- Ability Scores -->
-  <div class="grid grid-cols-2 gap-4 mb-6">
-    {% set abilities = [
-      {"label": "Proficiency Bonus", "key": "proficiencyBonus", "color": "bg-yellow-100 text-yellow-700"},
-      {"label": "Intelligence", "key": "intelligence", "color": "bg-blue-100 text-blue-700"},
-      {"label": "Strength", "key": "strength", "color": "bg-red-100 text-red-700"},
-      {"label": "Wisdom", "key": "wisdom", "color": "bg-green-100 text-green-700"},
-      {"label": "Dexterity", "key": "dexterity", "color": "bg-pink-100 text-pink-700"},
-      {"label": "Constitution", "key": "constitution", "color": "bg-purple-100 text-purple-700"},
-      {"label": "Charisma", "key": "charisma", "color": "bg-indigo-100 text-indigo-700"}
-    ] %}
-    {% for ability in abilities %}
-      <div class="border rounded-lg p-4 {{ ability.color }} flex flex-col items-center">
-        <div class="text-lg font-bold mb-1">{{ ability.label }}</div>
-        <div class="text-3xl font-extrabold mb-2">{{ character[ability.key].score }}</div>
-        <div class="text-xl font-semibold mb-2">Mod: {{ character[ability.key].mod }}</div>
-        {% if character[ability.key].savingThrow %}
-          <div class="text-sm mb-1">Saving Throw: <span class="font-bold">{{ character[ability.key].savingThrow }}</span></div>
-        {% endif %}
-        {% if character[ability.key].skills %}
-          <div class="text-xs mt-2">
-            <span class="font-semibold">Skills:</span>
-            <ul>
-              {% for skill in character[ability.key].skills %}
-                <li
-                  {% if skill.proficient %}class="text-blue-600 font-bold"
-                  {% elif skill.expert %}class="text-purple-600 font-bold"
-                  {% else %}class=""{% endif %}
-                >
-                  {{ skill.name }}: {{ skill.mod }}
-                </li>
-              {% endfor %}
-            </ul>
-          </div>
-        {% endif %}
-      </div>
-    {% endfor %}
-  </div>
+  {% set abilities = [
+    {"label": "Proficiency Bonus", "key": "proficiencyBonus", "color": "bg-yellow-100 text-yellow-700"},
+    {"label": "Intelligence", "key": "intelligence", "color": "bg-blue-100 text-blue-700"},
+    {"label": "Strength", "key": "strength", "color": "bg-red-100 text-red-700"},
+    {"label": "Wisdom", "key": "wisdom", "color": "bg-green-100 text-green-700"},
+    {"label": "Dexterity", "key": "dexterity", "color": "bg-pink-100 text-pink-700"},
+    {"label": "Constitution", "key": "constitution", "color": "bg-purple-100 text-purple-700"},
+    {"label": "Charisma", "key": "charisma", "color": "bg-indigo-100 text-indigo-700"}
+  ] %}
+  {% include "statSections/ability-scores.njk" %}
 
   <!-- Heroic Inspiration -->
   <div class="border rounded-lg p-4 mb-6 bg-yellow-50">

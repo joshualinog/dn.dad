@@ -1,0 +1,54 @@
+<div class="grid grid-cols-2 gap-4 mb-6">
+  {% set prof = abilities[0] %}
+  <div class="col-span-2 border rounded-lg p-4 {{ prof.color }} flex flex-col items-center">
+    <div class="text-lg font-bold mb-1">{{ prof.label }}</div>
+    <div class="text-3xl font-extrabold mb-2">{{ character[prof.key].score }}</div>
+    <div class="text-xl font-semibold mb-2">Mod: {{ character[prof.key].mod }}</div>
+    {% if character[prof.key].savingThrow %}
+      <div class="text-sm mb-1">Saving Throw: <span class="font-bold">{{ character[prof.key].savingThrow }}</span></div>
+    {% endif %}
+    {% if character[prof.key].skills %}
+      <div class="text-xs mt-2">
+        <span class="font-semibold">Skills:</span>
+        <ul>
+          {% for skill in character[prof.key].skills %}
+            <li
+              {% if skill.proficient %}class="text-blue-600 font-bold"
+              {% elif skill.expert %}class="text-purple-600 font-bold"
+              {% else %}class=""{% endif %}
+            >
+              {{ skill.name }}: {{ skill.mod }}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  </div>
+  {% for i in [1,2,3,4,5,6] %}
+    {% set ability = abilities[i] %}
+    <div class="border rounded-lg p-4 {{ ability.color }} flex flex-col items-center">
+      <div class="text-lg font-bold mb-1">{{ ability.label }}</div>
+      <div class="text-3xl font-extrabold mb-2">{{ character[ability.key].score }}</div>
+      <div class="text-xl font-semibold mb-2">Mod: {{ character[ability.key].mod }}</div>
+      {% if character[ability.key].savingThrow %}
+        <div class="text-sm mb-1">Saving Throw: <span class="font-bold">{{ character[ability.key].savingThrow }}</span></div>
+      {% endif %}
+      {% if character[ability.key].skills %}
+        <div class="text-xs mt-2">
+          <span class="font-semibold">Skills:</span>
+          <ul>
+            {% for skill in character[ability.key].skills %}
+              <li
+                {% if skill.proficient %}class="text-blue-600 font-bold"
+                {% elif skill.expert %}class="text-purple-600 font-bold"
+                {% else %}class=""{% endif %}
+              >
+                {{ skill.name }}: {{ skill.mod }}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
