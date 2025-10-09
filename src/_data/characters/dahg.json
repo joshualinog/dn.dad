@@ -1,55 +1,150 @@
 {
   "name": "Dahg",
-  "race": "Locathah",
+  "background": "Joyful Shepherd (Custom)",
+  "species": "Locathah",
   "class": "Bard",
   "subclass": "College of Glamour",
   "level": 1,
-  "background": "Joyful Shepherd",
   "alignment": "Neutral Good",
-  "abilities": {
-    "strength": 14,
-    "dexterity": 17,
-    "constitution": 15,
-    "intelligence": 13,
-    "wisdom": 17,
-    "charisma": 18
-  },
+  "inspiration": "Ted Lasso, Tom Bombadil, Michael (your brother)",
   "ac": 15,
   "hp": 10,
-  "proficiencies": [
-    "Light armor",
-    "Simple weapons",
-    "Hand crossbows",
-    "Longswords",
-    "Rapiers",
-    "Shortswords",
-    "Banjo",
-    "Herbalism kit"
+  "speed": "30 ft (swim 30 ft)",
+  "proficiencyBonus": { "score": 2, "mod": "+2" },
+  "heroicInspiration": "Radiant Encouragement: You can always find a place to stay by offering encouragement, music, and kindness. Communities welcome you, and you can diffuse most tensions with your joyful presence.",
+  "strength": {
+    "score": 14,
+    "mod": "+2",
+    "skills": [{ "name": "Athletics", "mod": "+2" }]
+  },
+  "dexterity": {
+    "score": 17,
+    "mod": "+3",
+    "savingThrow": "+5",
+    "skills": [
+      { "name": "Sleight of Hand", "mod": "+5", "proficient": true },
+      { "name": "Acrobatics", "mod": "+5", "proficient": true }
+    ]
+  },
+  "constitution": {
+    "score": 15,
+    "mod": "+2"
+  },
+  "intelligence": {
+    "score": 13,
+    "mod": "+1",
+    "skills": [{ "name": "Minor Illusion", "mod": "+1" }]
+  },
+  "wisdom": {
+    "score": 17,
+    "mod": "+3",
+    "skills": [
+      { "name": "Insight", "mod": "+5", "proficient": true },
+      { "name": "Perception", "mod": "+5", "proficient": true }
+    ]
+  },
+  "charisma": {
+    "score": 18,
+    "mod": "+4",
+    "savingThrow": "+6",
+    "skills": [
+      { "name": "Performance", "mod": "+6", "proficient": true },
+      { "name": "Persuasion", "mod": "+6", "proficient": true },
+      { "name": "Deception", "mod": "+6", "proficient": true }
+    ]
+  },
+  "equipment": {
+    "armor": "Leather armor",
+    "weapons": "Rapier or dagger",
+    "tools": "Banjo/guitar/drum, Herbalism kit",
+    "packs": "Diplomat’s pack, hammock, pouch of herbal teas, simple clothes, community token"
+  },
+  "coins": {
+    "gold": 15
+  },
+  "languages": ["Common", "Aquan", "Elvish"],
+  "specialAbilities": [
+    { "name": "Amphibious", "description": "Can breathe air and water." },
+    {
+      "name": "Natural Armor",
+      "description": "AC = 12 + Dex modifier (use if higher than leather armor)."
+    },
+    { "name": "Observant", "description": "Proficiency in Perception." },
+    {
+      "name": "Resilience",
+      "description": "Advantage on saving throws against being charmed, frightened, paralyzed, poisoned, stunned."
+    }
   ],
-  "skills": [
-    "Performance",
-    "Persuasion",
-    "Insight",
-    "Sleight of Hand",
-    "Acrobatics",
-    "Deception",
-    "Perception"
+  "classFeatures": [
+    {
+      "name": "Spellcasting",
+      "description": "Charisma-based. See spell reference below."
+    },
+    {
+      "name": "Bardic Inspiration (d6, 4/day)",
+      "description": "Bonus action, within 60 ft, add d6 to ability check, attack roll, or saving throw."
+    }
   ],
-  "languages": ["Common", "Aquan", "One additional"],
-  "equipment": [
-    "Leather armor",
-    "Rapier",
-    "Banjo",
-    "Diplomat’s pack",
-    "Herbalism kit",
-    "Hammock",
-    "Pouch of herbal teas",
-    "Simple clothes",
-    "Community token",
-    "15 gp"
+  "backgroundFeature": {
+    "name": "Radiant Encouragement",
+    "description": "You can always find a place to stay by offering encouragement, music, and kindness. Communities welcome you, and you can diffuse most tensions with your joyful presence."
+  },
+  "ideals": [
+    "Universal Giving of Many Chances",
+    "Relentless Hope",
+    "Radical Acceptance",
+    "Champion of the Underdog",
+    "Weaponized Invitation"
+  ],
+  "bonds": [
+    "The Underdog (champion, uplift, dignify)",
+    "Family of Choice (party is family)",
+    "Place of Rest (hammock, glade, village)",
+    "Instrument of Joy (banjo/guitar)",
+    "Power of Second Chances",
+    "The Invitation"
+  ],
+  "flaws": [
+    "Afraid of his own pain, shuts down if confronted with it.",
+    "Refuses complexity, oversimplifies reality and evil."
   ],
   "spells": {
     "cantrips": ["Vicious Mockery", "Friends", "Minor Illusion"],
-    "level1": ["Sleep", "Healing Word", "Charm Person", "Heroism"]
-  }
+    "level1": ["Sleep", "Healing Word", "Charm Person", "Heroism"],
+    "optional": [
+      "Tasha’s Hideous Laughter",
+      "Faerie Fire",
+      "Dissonant Whispers"
+    ]
+  },
+  "combatActions": [
+    { "name": "Rapier", "value": "+5 / 1d8+3", "notes": "Finesse, 1-handed" },
+    {
+      "name": "Vicious Mockery",
+      "value": "DC 14 / 1d4 psychic",
+      "notes": "Disadvantage on next attack"
+    },
+    {
+      "name": "Sleep",
+      "value": "90 ft / 5d8 HP",
+      "notes": "Non-lethal crowd control"
+    },
+    {
+      "name": "Healing Word",
+      "value": "60 ft / 1d4+4 healing",
+      "notes": "Bonus action"
+    }
+  ],
+  "roleplayNotes": [
+    "Always encourage, invite, and uplift.",
+    "Avoid violence; use sleep, charm, and creative spells.",
+    "Seek underdogs and outsiders—make them the main character.",
+    "Rest often, and teach others the power of joy and downtime.",
+    "Use your instrument as both tool and symbol of hope."
+  ],
+  "levelUpReminders": [
+    "Level 2: Jack of All Trades, Song of Rest, more spells (Calm Emotions, Suggestion).",
+    "Level 3: College of Glamour features (Mantle of Inspiration, Enthralling Performance).",
+    "Feats: Inspiring Leader (for mass temp HP), Resilient (Wisdom), Actor (for roleplay, disguise)."
+  ]
 }
