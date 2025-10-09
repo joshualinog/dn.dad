@@ -1,69 +1,96 @@
 {
   "name": "Sahar",
-  "race": "Astral Elf (Lunar Emphasis)",
+  "background": "Criminal/Spy",
+  "species": "Astral Elf (Lunar Emphasis)",
   "class": "Rogue",
   "subclass": "Arcane Trickster",
   "level": 1,
-  "background": "Criminal/Spy",
   "alignment": "Lawful Good",
   "xp": 0,
   "ac": 14,
   "hp": 10,
   "speed": "30ft",
-  "proficiencyBonus": "+2",
-  "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=400&h=600&q=80",
-  "abilities": {
-    "strength": { "score": 7, "modifier": "-2" },
-    "dexterity": { "score": 16, "modifier": "+3" },
-    "constitution": { "score": 15, "modifier": "+2" },
-    "intelligence": { "score": 17, "modifier": "+3" },
-    "wisdom": { "score": 10, "modifier": "+0" },
-    "charisma": { "score": 13, "modifier": "+1" }
+  "proficiencyBonus": {
+    "score": 2,
+    "mod": "+2"
   },
-  "savingThrows": [
-    { "name": "Dexterity", "value": "+5" },
-    { "name": "Intelligence", "value": "+5" },
-    { "name": "Strength", "value": "-2" },
-    { "name": "Constitution", "value": "+2" },
-    { "name": "Wisdom", "value": "+0" },
-    { "name": "Charisma", "value": "+1" }
-  ],
-  "keySkills": [
-    { "name": "Stealth (Expertise)", "value": "+7" },
-    { "name": "Sleight of Hand (Expertise)", "value": "+7" },
-    { "name": "Investigation", "value": "+5" },
-    { "name": "Perception", "value": "+2" }
-  ],
-  "skills": [
-    "Deception",
-    "Insight",
-    "Investigation",
-    "Perception",
-    "Sleight of Hand",
-    "Stealth"
-  ],
-  "combatActions": [
-    {
-      "name": "Dagger (Melee)",
-      "value": "+5 / 1d4+3",
-      "notes": "Finesse, Light, Thrown"
-    },
-    {
-      "name": "Dagger (Thrown)",
-      "value": "+5 / 1d4+3",
-      "notes": "Range 20/60"
-    },
-    {
-      "name": "Sacred Flame",
-      "value": "DC 13 / 1d8",
-      "notes": "Dex Save, 60ft"
-    },
-    {
-      "name": "Sneak Attack (1/turn)",
-      "value": "+1d6",
-      "notes": "Requires finesse/ranged weapon + (Advantage OR ally within 5ft of target)"
-    }
-  ],
+  "heroicInspiration": "None currently.",
+  "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=400&h=600&q=80",
+  "intelligence": {
+    "score": 17,
+    "mod": "+3",
+    "savingThrow": "+5",
+    "skills": [
+      { "name": "Investigation", "mod": "+5", "proficient": true },
+      { "name": "Arcana", "mod": "+3" },
+      { "name": "History", "mod": "+3" },
+      { "name": "Nature", "mod": "+3" },
+      { "name": "Religion", "mod": "+3" }
+    ]
+  },
+  "strength": {
+    "score": 7,
+    "mod": "-2",
+    "savingThrow": "-2",
+    "skills": [{ "name": "Athletics", "mod": "-2" }]
+  },
+  "wisdom": {
+    "score": 10,
+    "mod": "+0",
+    "savingThrow": "+0",
+    "skills": [
+      { "name": "Insight", "mod": "+2", "proficient": true },
+      { "name": "Medicine", "mod": "+0" },
+      { "name": "Perception", "mod": "+2", "proficient": true },
+      { "name": "Survival", "mod": "+0" },
+      { "name": "Animal Handling", "mod": "+0" }
+    ]
+  },
+  "dexterity": {
+    "score": 16,
+    "mod": "+3",
+    "savingThrow": "+5",
+    "skills": [
+      { "name": "Stealth", "mod": "+7", "expert": true },
+      { "name": "Sleight of Hand", "mod": "+7", "expert": true },
+      { "name": "Acrobatics", "mod": "+5", "proficient": true }
+    ]
+  },
+  "constitution": {
+    "score": 15,
+    "mod": "+2",
+    "savingThrow": "+2",
+    "skills": []
+  },
+  "charisma": {
+    "score": 13,
+    "mod": "+1",
+    "savingThrow": "+1",
+    "skills": [
+      { "name": "Deception", "mod": "+3", "proficient": true },
+      { "name": "Performance", "mod": "+1" },
+      { "name": "Persuasion", "mod": "+1" },
+      { "name": "Intimidation", "mod": "+1" }
+    ]
+  },
+  "equipment": {
+    "armor": "Leather armor",
+    "weapons": "2 daggers, light crossbow (20 bolts)",
+    "tools": "Thieves' tools",
+    "packs": "Burglar's pack"
+  },
+  "coins": {
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 100,
+    "platinum": 0
+  },
+  "languages": ["Common", "Elvish", "Thieves' Cant"],
+  "spells": {
+    "cantrips": ["Sacred Flame"],
+    "level1": []
+  },
   "specialAbilities": [
     {
       "name": "Starlight Step (2/Long Rest)",
@@ -91,6 +118,28 @@
       "description": "Secret language known by rogues and criminals."
     }
   ],
+  "combatActions": [
+    {
+      "name": "Dagger (Melee)",
+      "value": "+5 / 1d4+3",
+      "notes": "Finesse, Light, Thrown"
+    },
+    {
+      "name": "Dagger (Thrown)",
+      "value": "+5 / 1d4+3",
+      "notes": "Range 20/60"
+    },
+    {
+      "name": "Sacred Flame",
+      "value": "DC 13 / 1d8",
+      "notes": "Dex Save, 60ft"
+    },
+    {
+      "name": "Sneak Attack (1/turn)",
+      "value": "+1d6",
+      "notes": "Requires finesse/ranged weapon + (Advantage OR ally within 5ft of target)"
+    }
+  ],
   "combatTactics": [
     "Check for Sneak Attack opportunity (advantage/ally nearby)",
     "Attack with highest damage weapon",
@@ -111,24 +160,5 @@
     "Level 3: Arcane Trickster, spells, Mage Hand Legerdemain",
     "Level 4: ASI/Feat (consider Dex to 18 or Mobile feat)",
     "Level 6: Additional Expertise choices"
-  ],
-  "equipment": [
-    "Leather armor",
-    "2 daggers",
-    "Thieves' tools",
-    "Burglar's pack",
-    "Light crossbow with 20 bolts"
-  ],
-  "coins": {
-    "copper": 0,
-    "silver": 0,
-    "electrum": 0,
-    "gold": 100,
-    "platinum": 0
-  },
-  "languages": ["Common", "Elvish", "Thieves' Cant"],
-  "spells": {
-    "cantrips": ["Sacred Flame"],
-    "level1": []
-  }
+  ]
 }
