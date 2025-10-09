@@ -1,29 +1,38 @@
 {
   "name": "Sahar",
-  "race": "Astral Elf",
+  "race": "Astral Elf (Lunar Emphasis)",
   "class": "Rogue",
   "subclass": "Arcane Trickster",
   "level": 1,
   "background": "Criminal/Spy",
   "alignment": "Lawful Good",
-  "abilities": {
-    "strength": 7,
-    "dexterity": 16,
-    "constitution": 15,
-    "intelligence": 17,
-    "wisdom": 10,
-    "charisma": 13
-  },
-  "ac": 13,
+  "xp": 0,
+  "ac": 14,
   "hp": 10,
-  "proficiencies": [
-    "Leather armor",
-    "Simple weapons",
-    "Hand crossbows",
-    "Longswords",
-    "Rapiers",
-    "Shortswords",
-    "Thieves' tools"
+  "speed": "30ft",
+  "proficiencyBonus": "+2",
+  "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=400&h=600&q=80",
+  "abilities": {
+    "strength": { "score": 7, "modifier": "-2" },
+    "dexterity": { "score": 16, "modifier": "+3" },
+    "constitution": { "score": 15, "modifier": "+2" },
+    "intelligence": { "score": 17, "modifier": "+3" },
+    "wisdom": { "score": 10, "modifier": "+0" },
+    "charisma": { "score": 13, "modifier": "+1" }
+  },
+  "savingThrows": [
+    { "name": "Dexterity", "value": "+5" },
+    { "name": "Intelligence", "value": "+5" },
+    { "name": "Strength", "value": "-2" },
+    { "name": "Constitution", "value": "+2" },
+    { "name": "Wisdom", "value": "+0" },
+    { "name": "Charisma", "value": "+1" }
+  ],
+  "keySkills": [
+    { "name": "Stealth (Expertise)", "value": "+7" },
+    { "name": "Sleight of Hand (Expertise)", "value": "+7" },
+    { "name": "Investigation", "value": "+5" },
+    { "name": "Perception", "value": "+2" }
   ],
   "skills": [
     "Deception",
@@ -33,7 +42,76 @@
     "Sleight of Hand",
     "Stealth"
   ],
-  "languages": ["Common", "Elvish", "Thieves' Cant"],
+  "combatActions": [
+    {
+      "name": "Dagger (Melee)",
+      "value": "+5 / 1d4+3",
+      "notes": "Finesse, Light, Thrown"
+    },
+    {
+      "name": "Dagger (Thrown)",
+      "value": "+5 / 1d4+3",
+      "notes": "Range 20/60"
+    },
+    {
+      "name": "Sacred Flame",
+      "value": "DC 13 / 1d8",
+      "notes": "Dex Save, 60ft"
+    },
+    {
+      "name": "Sneak Attack (1/turn)",
+      "value": "+1d6",
+      "notes": "Requires finesse/ranged weapon + (Advantage OR ally within 5ft of target)"
+    }
+  ],
+  "specialAbilities": [
+    {
+      "name": "Starlight Step (2/Long Rest)",
+      "description": "Bonus Action: Teleport 30ft to visible unoccupied space. Tactical use: hit-and-run, positioning, escape."
+    }
+  ],
+  "racialFeatures": [
+    {
+      "name": "Keen Senses",
+      "description": "Proficiency with Perception skill."
+    },
+    {
+      "name": "Fey Ancestry",
+      "description": "Advantage vs charm, immune to magical sleep."
+    },
+    { "name": "Astral Trance", "description": "4-hour long rest." }
+  ],
+  "classFeatures": [
+    {
+      "name": "Sneak Attack",
+      "description": "1d6 additional damage with finesse/ranged weapon, once per turn, with advantage or ally within 5ft."
+    },
+    {
+      "name": "Thieves' Cant",
+      "description": "Secret language known by rogues and criminals."
+    }
+  ],
+  "combatTactics": [
+    "Check for Sneak Attack opportunity (advantage/ally nearby)",
+    "Attack with highest damage weapon",
+    "Consider Starlight Step for positioning/escape",
+    "Use terrain and stealth to your advantage",
+    "Attack with Sneak Attack",
+    "Use Starlight Step (bonus action) to teleport away",
+    "Next turn: Hide (Cunning Action) for advantage"
+  ],
+  "roleplayNotes": [
+    "Acrobatic fighter with lunar spiritual connection",
+    "Incorporates flips and gymnastics (flavor)",
+    "Battlefield tactics over social manipulation",
+    "Precise and honorable"
+  ],
+  "levelUpReminders": [
+    "Level 2: Cunning Action",
+    "Level 3: Arcane Trickster, spells, Mage Hand Legerdemain",
+    "Level 4: ASI/Feat (consider Dex to 18 or Mobile feat)",
+    "Level 6: Additional Expertise choices"
+  ],
   "equipment": [
     "Leather armor",
     "2 daggers",
@@ -41,6 +119,14 @@
     "Burglar's pack",
     "Light crossbow with 20 bolts"
   ],
+  "coins": {
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 100,
+    "platinum": 0
+  },
+  "languages": ["Common", "Elvish", "Thieves' Cant"],
   "spells": {
     "cantrips": ["Sacred Flame"],
     "level1": []

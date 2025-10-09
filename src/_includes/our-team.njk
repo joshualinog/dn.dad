@@ -1,6 +1,6 @@
 {% for character in characters %}
 <div class="flex-shrink max-w-full px-4 w-2/3 sm:w-1/2 md:w-5/12 lg:w-1/4 xl:px-6">
-    <a href="/characters/{{ character.name | slug }}/" class="block">
+    <a href="{{ ('/characters/' + (character.name | slug) + '/') | url }}" class="block">
       <div class="relative overflow-hidden bg-white dark:bg-gray-800 mb-12 hover-grayscale-0 wow fadeInUp" data-wow-duration="1s">
           <div class="relative overflow-hidden px-6">
               <img src="https://tailone.tailwindtemplate.net/src/img/dummy/avatar1.png" class="max-w-full h-auto mx-auto rounded-full bg-gray-50 grayscale" alt="title image">

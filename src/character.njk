@@ -1,35 +1,188 @@
+
 ---
+pagination:
+  data: characters
+  size: 1
+  alias: character
 permalink: "/characters/{{ character.name | slug }}/"
+layout: layout.njk
 ---
 
-<section class="container mx-auto px-4 py-8">
-  <h1 class="text-3xl font-bold mb-4">{{ character.name }}</h1>
-  <p class="mb-2"><strong>Race:</strong> {{ character.race }}</p>
-  <p class="mb-2"><strong>Class:</strong> {{ character.class }}{% if character.subclass %} ({{ character.subclass }}){% endif %}</p>
-  <p class="mb-2"><strong>Level:</strong> {{ character.level }}</p>
-  <p class="mb-2"><strong>Background:</strong> {{ character.background }}</p>
-  <p class="mb-2"><strong>Alignment:</strong> {{ character.alignment }}</p>
-  <h2 class="text-xl font-semibold mt-6 mb-2">Abilities</h2>
-  <ul>
-    {% for ability, value in character.abilities %}
-      <li>{{ ability | capitalize }}: {{ value }}</li>
-    {% endfor %}
-  </ul>
-  <h2 class="text-xl font-semibold mt-6 mb-2">Skills</h2>
-  <ul>
-    {% for skill in character.skills %}
-      <li>{{ skill }}</li>
-    {% endfor %}
-  </ul>
-  <h2 class="text-xl font-semibold mt-6 mb-2">Equipment</h2>
-  <ul>
-    {% for item in character.equipment %}
-      <li>{{ item }}</li>
-    {% endfor %}
-  </ul>
-  <h2 class="text-xl font-semibold mt-6 mb-2">Spells</h2>
-  <ul>
-    <li><strong>Cantrips:</strong> {% for spell in character.spells.cantrips %}{{ spell }}{% if not loop.last %}, {% endif %}{% endfor %}</li>
-    <li><strong>Level 1:</strong> {% for spell in character.spells.level1 %}{{ spell }}{% if not loop.last %}, {% endif %}{% endfor %}</li>
-  </ul>
+<section class="max-w-6xl mx-auto bg-white dark:bg-gray-800 p-8 rounded shadow grid grid-cols-1 md:grid-cols-3 gap-8">
+  <!-- Left Column -->
+  <div class="md:col-span-1 flex flex-col gap-4">
+    <div class="border p-4 rounded mb-2">
+      <h1 class="text-3xl font-bold mb-2">{{ character.name }}</h1>
+      <div><strong>Background:</strong> {{ character.background }}</div>
+      <div><strong>Species:</strong> {{ character.race }}</div>
+      <div><strong>Class:</strong> {{ character.class }}{% if character.subclass %} ({{ character.subclass }}){% endif %}</div>
+      <div><strong>Level:</strong> {{ character.level }}</div>
+    </div>
+    <div class="grid grid-cols-2 gap-2 mb-2">
+      <div class="border p-2 rounded text-center">
+        <div class="font-bold">Proficiency Bonus</div>
+        <div>{{ character.proficiencyBonus }}</div>
+      </div>
+      {% for ability, value in character.abilities %}
+      <div class="border p-2 rounded text-center">
+        <div class="font-bold">{{ ability | capitalize }}</div>
+        <div>Score: {{ value.score }}</div>
+        <div>Mod: {{ value.modifier }}</div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="border p-2 rounded mb-2">
+      <div class="font-bold mb-1">Saving Throws</div>
+      <ul>
+        {% for save in character.savingThrows %}
+          <li>{{ save.name }}: {{ save.value }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="border p-2 rounded mb-2">
+      <div class="font-bold mb-1">Skill Proficiencies</div>
+      <ul>
+        {% for skill in character.keySkills %}
+          <li>{{ skill.name }}: {{ skill.value }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="border p-2 rounded">
+      <div class="font-bold mb-1">Equipment Proficiencies & Pack</div>
+      <ul>
+        {% for item in character.equipment %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <!-- Center Column -->
+  <div class="md:col-span-1 flex flex-col gap-4">
+    <div class="grid grid-cols-4 gap-2 mb-2">
+      <div class="border p-2 rounded text-center">
+        <div class="font-bold">HP</div>
+        <div>{{ character.hp }}</div>
+      </div>
+      <div class="border p-2 rounded text-center">
+        <div class="font-bold">AC</div>
+        <div>{{ character.ac }}</div>
+      </div>
+      <div class="border p-2 rounded text-center">
+        <div class="font-bold">Hit Dice</div>
+        <div>1d8</div>
+      </div>
+      <div class="border p-2 rounded text-center">
+        <div class="font-bold">Death Saves</div>
+        <div>Success/Failure</div>
+      </div>
+    </div>
+    <div class="grid grid-cols-4 gap-2 mb-2">
+      <div class="border p-2 rounded text-center">
+        <div class="font-bold">Initiative</div>
+        <div>+{{ character.initiative or '2' }}</div>
+      </div>
+      <div class="border p-2 rounded text-center">
+        <div class="font-bold">Speed</div>
+        <div>{{ character.speed }}</div>
+      </div>
+      <div class="border p-2 rounded text-center">
+        <div class="font-bold">Size</div>
+        <div>{{ character.size or 'med' }}</div>
+      </div>
+      <div class="border p-2 rounded text-center">
+        <div class="font-bold">Passive Perception</div>
+        <div>{{ character.passivePerception or '10' }}</div>
+      </div>
+    </div>
+    <div class="border p-2 rounded mb-2">
+      <div class="font-bold mb-1">Weapons & Armor</div>
+      <table class="w-full text-left border mb-2">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Attack/Damage</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for action in character.combatActions %}
+            <tr>
+              <td>{{ action.name }}</td>
+              <td>{{ action.value }}</td>
+              <td>{{ action.notes }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <div class="border p-2 rounded mb-2">
+      <div class="font-bold mb-1">Feats & Abilities</div>
+      <table class="w-full text-left border mb-2">
+        <thead>
+          <tr>
+            <th>Feat</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for ability in character.specialAbilities %}
+            <tr>
+              <td>{{ ability.name }}</td>
+              <td>{{ ability.description }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <div class="border p-2 rounded mb-2">
+      <div class="font-bold mb-1">Racial & Class Features</div>
+      <ul>
+        {% for feature in character.racialFeatures %}
+          <li><strong>{{ feature.name }}:</strong> {{ feature.description }}</li>
+        {% endfor %}
+        {% for feature in character.classFeatures %}
+          <li><strong>{{ feature.name }}:</strong> {{ feature.description }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <!-- Right Column -->
+  <div class="md:col-span-1 flex flex-col items-center gap-4">
+    {% if character.image %}
+      <img src="{{ character.image }}" alt="{{ character.name }} portrait" class="rounded-lg shadow mb-4 w-full max-w-xs">
+    {% endif %}
+    <div class="border p-2 rounded w-full mb-2">
+      <div class="font-bold mb-1">Coins</div>
+      <table class="w-full text-left border mb-2">
+        <thead>
+          <tr>
+            <th>Copper</th>
+            <th>Silver</th>
+            <th>Electrum</th>
+            <th>Gold</th>
+            <th>Platinum</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ character.coins.copper }}</td>
+            <td>{{ character.coins.silver }}</td>
+            <td>{{ character.coins.electrum }}</td>
+            <td>{{ character.coins.gold }}</td>
+            <td>{{ character.coins.platinum }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="border p-2 rounded w-full mb-2">
+      <div class="font-bold mb-1">Languages</div>
+      <div>
+        {% for lang in character.languages %}
+          <span class="inline-block bg-gray-200 dark:bg-gray-700 rounded px-2 py-1 m-1">{{ lang }}</span>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 </section>

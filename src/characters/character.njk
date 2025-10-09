@@ -1,0 +1,46 @@
+---
+pagination:
+  data: characters
+  size: 1
+  alias: character
+permalink: "/characters/{{ character.name | slug }}/"
+layout: layout.njk
+---
+
+<section class="container mx-auto px-4 py-8">
+  <h1 class="text-3xl font-bold mb-4">{{ character.name }}</h1>
+  <p class="mb-2"><strong>Race:</strong> {{ character.race }}</p>
+  <p class="mb-2"><strong>Class:</strong> {{ character.class }}{% if character.subclass %} ({{ character.subclass }}){% endif %}</p>
+  <p class="mb-2"><strong>Level:</strong> {{ character.level }}</p>
+  <p class="mb-2"><strong>Background:</strong> {{ character.background }}</p>
+  <p class="mb-2"><strong>Alignment:</strong> {{ character.alignment }}</p>
+  <h2 class="text-xl font-semibold mt-6 mb-2">Abilities</h2>
+  <ul>
+    {% for ability, value in character.abilities %}
+      <li>{{ ability | capitalize }}: {{ value.score }} ({{ value.modifier }})</li>
+    {% endfor %}
+  </ul>
+  <h2 class="text-xl font-semibold mt-6 mb-2">Skills</h2>
+  <ul>
+    {% for skill in character.skills %}
+      <li>{{ skill }}</li>
+    {% endfor %}
+  </ul>
+  <h2 class="text-xl font-semibold mt-6 mb-2">Skill Modifiers</h2>
+  <ul>
+    {% for skill in character.keySkills %}
+      <li>{{ skill.name }}: {{ skill.value }}</li>
+    {% endfor %}
+  </ul>
+  <h2 class="text-xl font-semibold mt-6 mb-2">Equipment</h2>
+  <ul>
+    {% for item in character.equipment %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+  <h2 class="text-xl font-semibold mt-6 mb-2">Spells</h2>
+    <ul>
+      <li><strong>Cantrips:</strong> {% for spell in character.spells.cantrips %}{{ spell }}{% if not loop.last %}, {% endif %}{% endfor %}</li>
+      <li><strong>Level 1:</strong> {% for spell in character.spells.level1 %}{{ spell }}{% if not loop.last %}, {% endif %}{% endfor %}</li>
+    </ul>
+</section>
