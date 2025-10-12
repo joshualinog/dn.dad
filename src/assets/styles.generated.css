@@ -975,6 +975,8 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+/* https://coolors.co/palette/e85596-f9cf4a-54adcb-d3cc10-da3f40-b45fb0-e2be99 */
+
 
 /* Apply Bangers font to all heading elements DRYly */
 h1, h2, h3, h4, h5, h6 {
