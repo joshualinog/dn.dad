@@ -1,5 +1,5 @@
 <div class="mb-8">
-  <h2 class="text-4xl font-dynapuff font-bold text-left mb-6 tracking-wide">SKILLS</h2>
+  <h2 class="text-4xl font-dynapuff font-bold text-left mb-6 tracking-wide flex justify-between items-center">SKILLS <span class="text-candyGold capitalize text-xl text-right">Proficiency Bonus : {{ character.proficiencyBonus.mod }}</span></h2>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
     {% for i in [1,2,3,4,5,6] %}
       {% set ability = abilities[i] %}
