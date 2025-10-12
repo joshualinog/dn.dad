@@ -1,54 +1,41 @@
-<div class="grid grid-cols-2 gap-4 mb-6">
-  {% set prof = abilities[0] %}
-  <div class="col-span-2 border rounded-lg p-4 {{ prof.color }} flex flex-col items-center">
-  <div class="text-2xl font-dynapuff uppercase font-bold mb-1">{{ prof.label }}</div>
-    <div class="text-5xl font-gaegu font-extrabold mb-2">{{ character[prof.key].score }}</div>
-  <div class="text-xl font-dynapuff uppercase font-semibold mb-2">Mod: <span class="font-gaegu"> {{ character[prof.key].mod }}</span></div>
-    {% if character[prof.key].savingThrow %}
-      <div class="text-sm mb-1">Saving Throw: <span class="font-bold">{{ character[prof.key].savingThrow }}</span></div>
-    {% endif %}
-    {% if character[prof.key].skills %}
-      <div class="text-xs mt-2">
-        <span class="font-semibold">Skills:</span>
-        <ul>
-          {% for skill in character[prof.key].skills %}
-            <li
-              {% if skill.proficient %}class="text-blue-600 font-bold"
-              {% elif skill.expert %}class="text-purple-600 font-bold"
-              {% else %}class=""{% endif %}
-            >
-              {{ skill.name }}: {{ skill.mod }}
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-    {% endif %}
-  </div>
-  {% for i in [1,2,3,4,5,6] %}
-    {% set ability = abilities[i] %}
-    <div class="border rounded-lg p-4 {{ ability.color }} flex flex-col items-center">
-  <div class="text-2xl font-dynapuff uppercase font-bold mb-1">{{ ability.label }}</div>
-      <div class="text-5xl font-gaegu font-extrabold mb-2">{{ character[ability.key].score }}</div>
-  <div class="text-xl font-dynapuff uppercase font-semibold mb-2">Mod: <span class="font-gaegu"> {{ character[ability.key].mod }}</span></div>
-      {% if character[ability.key].savingThrow %}
-        <div class="text-sm mb-1">Saving Throw: <span class="font-bold">{{ character[ability.key].savingThrow }}</span></div>
-      {% endif %}
-      {% if character[ability.key].skills %}
-        <div class="text-xs mt-2">
-          <span class="font-semibold">Skills:</span>
-          <ul>
-            {% for skill in character[ability.key].skills %}
-              <li
-                {% if skill.proficient %}class="text-blue-600 font-bold"
-                {% elif skill.expert %}class="text-purple-600 font-bold"
-                {% else %}class=""{% endif %}
-              >
-                {{ skill.name }}: {{ skill.mod }}
-              </li>
-            {% endfor %}
-          </ul>
+<div class="mb-8">
+  <h2 class="text-4xl font-dynapuff font-bold text-left mb-6 tracking-wide">SKILLS</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    {% for i in [1,2,3,4,5,6] %}
+      {% set ability = abilities[i] %}
+      <div class="bg-candyTan-200 border-2 border-candyTan-700 rounded-xl shadow p-2">
+  <div class="text-3xl md:text-4xl font-dynapuff font-bold text-candyTan-900 w-full text-left py-2">{{ ability.label }}</div>
+  <div class="grid grid-cols-5 gap-2 items-start h-full">
+          <!-- Left: Score, Mod -->
+          <div class="col-span-2 flex flex-col items-start w-full h-full justify-start">
+            <div class="flex flex-col items-center w-full h-full">
+              <div class="border-2 border-candyTan-700 rounded-lg w-full text-7xl font-gaegu text-candyTan-900 bg-candyTan-100 h-4/6 flex items-center justify-center">{{ character[ability.key].score }}</div>
+              <div class="border-2 border-candyTan-700 rounded-full px-4 py-1 text-2xl font-gaegu text-candyTan-900 bg-candyTan-100 h-1/6 font-extrabold">{{ character[ability.key].mod }}</div>
+            </div>
+          </div>
+          <!-- Right: Saving Throw & Skills -->
+          <div class="col-span-3 flex flex-col items-start justify-center w-full h-full ">
+            {% if character[ability.key].savingThrow %}
+              <div class="flex items-center gap-2 mb-2 w-full">
+                <span class="font-black uppercase font-gaegu text-candyTan-900">Saving Throw</span>
+                <span class="border-2 border-candyTan-700 rounded px-1 py-1 text-candyTan-900 font-gaegu bg-candyTan-100">{{ character[ability.key].savingThrow }}</span>
+              </div>
+            {% endif %}
+            {% if character[ability.key].skills %}
+              <ul class="space-y-1 h-full w-full">
+                {% for skill in character[ability.key].skills %}
+                  <li class="flex items-justify gap-2 w-full text-candyTan-900">
+                    <span class="font-gaegu font-bold">{{ skill.name }}</span>
+                    <span class="border-2 border-candyTan-700 rounded px-2 py-1 font-gaegu bg-candyTan-100">{{ skill.mod }}</span>
+                    {% if skill.proficient %}<span class="text-candyGold font-bold">★</span>{% endif %}
+                    {% if skill.expert %}<span class="text-candyPurple font-bold">✦</span>{% endif %}
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </div>
         </div>
-      {% endif %}
-    </div>
-  {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
 </div>
