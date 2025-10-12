@@ -16,7 +16,7 @@
   },
   "heroicInspiration": "None currently.",
   "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=400&h=600&q=80",
-  "intelligence": {
+  "i": {
     "score": 17,
     "mod": "+3",
     "savingThrow": "+5",
@@ -28,13 +28,13 @@
       { "name": "Religion", "mod": "+3" }
     ]
   },
-  "strength": {
+  "s": {
     "score": 7,
     "mod": "-2",
     "savingThrow": "-2",
     "skills": [{ "name": "Athletics", "mod": "-2" }]
   },
-  "wisdom": {
+  "w": {
     "score": 10,
     "mod": "+0",
     "savingThrow": "+0",
@@ -46,7 +46,7 @@
       { "name": "Animal Handling", "mod": "+0" }
     ]
   },
-  "dexterity": {
+  "d": {
     "score": 16,
     "mod": "+3",
     "savingThrow": "+5",
@@ -56,13 +56,13 @@
       { "name": "Acrobatics", "mod": "+5", "proficient": true }
     ]
   },
-  "constitution": {
+  "c": {
     "score": 15,
     "mod": "+2",
     "savingThrow": "+2",
     "skills": []
   },
-  "charisma": {
+  "ch": {
     "score": 13,
     "mod": "+1",
     "savingThrow": "+1",

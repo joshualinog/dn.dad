@@ -26,16 +26,10 @@ layout: layout.njk
   <div class="text-pink-600 font-gaegu text-2xl">{{ character.subclass }}</div>
   </div>
 
-  {% set abilities = [
-    {"label": "Proficiency Bonus", "key": "proficiencyBonus", "color": "bg-yellow-100 text-yellow-700"},
-    {"label": "Intelligence", "key": "intelligence", "color": "bg-blue-100 text-blue-700"},
-    {"label": "Strength", "key": "strength", "color": "bg-red-100 text-red-700"},
-    {"label": "Wisdom", "key": "wisdom", "color": "bg-green-100 text-green-700"},
-    {"label": "Dexterity", "key": "dexterity", "color": "bg-pink-100 text-pink-700"},
-    {"label": "Constitution", "key": "constitution", "color": "bg-purple-100 text-purple-700"},
-    {"label": "Charisma", "key": "charisma", "color": "bg-indigo-100 text-indigo-700"}
-  ] %}
+  {% set abilities = dndStats.abilities %}
   {% include "statSections/ability-scores.njk" %}
+  <!-- Force Tailwind to generate all stat block color classes for dynamic usage -->
+  <div class="hidden bg-candyPink-100 bg-candyYellow-100 bg-candyBlue-100 bg-candyGold-100 bg-candyRed-100 bg-candyPurple-100 border-candyPink-700 border-candyYellow-700 border-candyBlue-700 border-candyGold-700 border-candyRed-700 border-candyPurple-700 text-candyPink-900 text-candyYellow-900 text-candyBlue-900 text-candyGold-900 text-candyRed-900 text-candyPurple-900"></div>
 
   <!-- Heroic Inspiration -->
   <div class="border rounded-lg p-4 mb-6 bg-yellow-50">

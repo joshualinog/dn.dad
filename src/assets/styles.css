@@ -1,3 +1,9 @@
+/* Ensure Tailwind generates all dynamic stat block colors */
+.force-tailwind-colors {
+  @apply bg-candyPink-100 bg-candyYellow-100 bg-candyBlue-100 bg-candyGold-100 bg-candyRed-100 bg-candyPurple-100;
+  @apply border-candyPink-700 border-candyYellow-700 border-candyBlue-700 border-candyGold-700 border-candyRed-700 border-candyPurple-700;
+  @apply text-candyPink-900 text-candyYellow-900 text-candyBlue-900 text-candyGold-900 text-candyRed-900 text-candyPurple-900;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
