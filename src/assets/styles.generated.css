@@ -538,9 +538,6 @@ video {
 .relative {
   position: relative;
 }
-.col-span-3 {
-  grid-column: span 3 / span 3;
-}
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -629,9 +626,6 @@ video {
 }
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -799,6 +793,12 @@ video {
 .text-center {
   text-align: center;
 }
+.font-dynapuff {
+  font-family: Dynapuff, cursive;
+}
+.font-gaegu {
+  font-family: Gaegu, cursive;
+}
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -810,6 +810,14 @@ video {
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1;
 }
 .text-lg {
   font-size: 1.125rem;
@@ -838,6 +846,9 @@ video {
 }
 .font-semibold {
   font-weight: 600;
+}
+.uppercase {
+  text-transform: uppercase;
 }
 .capitalize {
   text-transform: capitalize;
@@ -936,10 +947,10 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-/* Custom Rubik Black for h1 */
-.rubik-black {
-	font-family: 'Rubik', ui-sans-serif, system-ui, sans-serif;
-	font-weight: 900;
+
+/* Apply Bangers font to all heading elements DRYly */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Dynapuff, cursive;
 }
 .hover\:underline:hover {
   text-decoration-line: underline;

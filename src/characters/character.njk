@@ -11,19 +11,19 @@ layout: layout.njk
 <div class="max-w-2xl mx-auto p-6 bg-gray-100 rounded-lg shadow-lg">
   <!-- Name Banner -->
   <div class="text-center mb-6">
-    <h1 class="text-4xl font-extrabold tracking-wide text-indigo-700 bg-indigo-100 py-2 rounded-t-lg">{{ character.name }}</h1>
+    <h1 class="text-8xl font-extrabold tracking-wide text-indigo-700 bg-indigo-100 py-2 rounded-t-lg">{{ character.name }}</h1>
   </div>
 
   <!-- Character Info Table -->
   <div class="grid grid-cols-2 gap-4 mb-6">
-    <div class="font-semibold text-gray-700">Background:</div>
-    <div class="text-blue-600 font-bold">{{ character.background }}</div>
-    <div class="font-semibold text-gray-700">Species:</div>
-    <div class="text-green-600 font-bold">{{ character.species }}</div>
-    <div class="font-semibold text-gray-700">Class:</div>
-    <div class="text-purple-600 font-bold">{{ character.class }}</div>
-    <div class="font-semibold text-gray-700">Subclass:</div>
-    <div class="text-pink-600 font-bold">{{ character.subclass }}</div>
+  <div class="font-semibold text-gray-700 font-dynapuff uppercase text-2xl">Background:</div>
+  <div class="text-blue-600 font-gaegu text-2xl">{{ character.background }}</div>
+  <div class="font-semibold text-gray-700 font-dynapuff uppercase text-2xl">Species:</div>
+  <div class="text-green-600 font-gaegu text-2xl">{{ character.species }}</div>
+  <div class="font-semibold text-gray-700 font-dynapuff uppercase text-2xl">Class:</div>
+  <div class="text-purple-600 font-gaegu text-2xl">{{ character.class }}</div>
+  <div class="font-semibold text-gray-700 font-dynapuff uppercase text-2xl">Subclass:</div>
+  <div class="text-pink-600 font-gaegu text-2xl">{{ character.subclass }}</div>
   </div>
 
   {% set abilities = [
