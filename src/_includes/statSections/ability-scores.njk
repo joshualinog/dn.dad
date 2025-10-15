@@ -2,8 +2,8 @@
   <h2 class="text-4xl font-dynapuff font-bold text-left mb-6 tracking-wide flex justify-between items-center">SKILLS <span class="text-candyTan-800 uppercase text-2xl text-right">Proficiency Bonus : {{ character.proficiencyBonus.mod }}</span></h2>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
     {% for ability in abilities %}
-      <div class="bg-{{ ability.color }}-100 border-2 border-{{ ability.color }}-700 rounded-xl shadow p-2">
-        <div class="text-3xl md:text-4xl font-dynapuff font-bold text-{{ ability.color }}-900 w-full text-left py-2">{{ ability.label }}</div>
+      <div class="bg-{{ ability.color }}-300 candy-border rounded-xl shadow p-2">
+        <div class="text-3xl md:text-4xl font-dynapuff font-bold text-{{ ability.color }}-500 w-full text-left py-2 uppercase">{{ ability.label }}</div>
         <div class="grid grid-cols-5 gap-2 items-start h-full">
           <div class="col-span-2 flex flex-col items-start w-full h-full justify-start">
             <div class="flex flex-col items-center w-full h-full">

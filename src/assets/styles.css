@@ -1,8 +1,32 @@
 /* Ensure Tailwind generates all dynamic stat block colors */
 .force-tailwind-colors {
-  @apply bg-candyPink-100 bg-candyYellow-100 bg-candyBlue-100 bg-candyGold-100 bg-candyRed-100 bg-candyPurple-100;
-  @apply border-candyPink-700 border-candyYellow-700 border-candyBlue-700 border-candyGold-700 border-candyRed-700 border-candyPurple-700;
-  @apply text-candyPink-900 text-candyYellow-900 text-candyBlue-900 text-candyGold-900 text-candyRed-900 text-candyPurple-900;
+  /* All bg, border, and text color classes for custom colors and shades 100-900 */
+  @apply 
+    bg-candyPink-100 bg-candyPink-200 bg-candyPink-300 bg-candyPink-400 bg-candyPink-500 bg-candyPink-600 bg-candyPink-700 bg-candyPink-800 bg-candyPink-900
+    bg-candyYellow-100 bg-candyYellow-200 bg-candyYellow-300 bg-candyYellow-400 bg-candyYellow-500 bg-candyYellow-600 bg-candyYellow-700 bg-candyYellow-800 bg-candyYellow-900
+    bg-candyBlue-100 bg-candyBlue-200 bg-candyBlue-300 bg-candyBlue-400 bg-candyBlue-500 bg-candyBlue-600 bg-candyBlue-700 bg-candyBlue-800 bg-candyBlue-900
+    bg-candyGold-100 bg-candyGold-200 bg-candyGold-300 bg-candyGold-400 bg-candyGold-500 bg-candyGold-600 bg-candyGold-700 bg-candyGold-800 bg-candyGold-900
+    bg-candyRed-100 bg-candyRed-200 bg-candyRed-300 bg-candyRed-400 bg-candyRed-500 bg-candyRed-600 bg-candyRed-700 bg-candyRed-800 bg-candyRed-900
+    bg-candyPurple-100 bg-candyPurple-200 bg-candyPurple-300 bg-candyPurple-400 bg-candyPurple-500 bg-candyPurple-600 bg-candyPurple-700 bg-candyPurple-800 bg-candyPurple-900
+    bg-candyTan-100 bg-candyTan-200 bg-candyTan-300 bg-candyTan-400 bg-candyTan-500 bg-candyTan-600 bg-candyTan-700 bg-candyTan-800 bg-candyTan-900;
+
+  @apply 
+    border-candyPink-100 border-candyPink-200 border-candyPink-300 border-candyPink-400 border-candyPink-500 border-candyPink-600 border-candyPink-700 border-candyPink-800 border-candyPink-900
+    border-candyYellow-100 border-candyYellow-200 border-candyYellow-300 border-candyYellow-400 border-candyYellow-500 border-candyYellow-600 border-candyYellow-700 border-candyYellow-800 border-candyYellow-900
+    border-candyBlue-100 border-candyBlue-200 border-candyBlue-300 border-candyBlue-400 border-candyBlue-500 border-candyBlue-600 border-candyBlue-700 border-candyBlue-800 border-candyBlue-900
+    border-candyGold-100 border-candyGold-200 border-candyGold-300 border-candyGold-400 border-candyGold-500 border-candyGold-600 border-candyGold-700 border-candyGold-800 border-candyGold-900
+    border-candyRed-100 border-candyRed-200 border-candyRed-300 border-candyRed-400 border-candyRed-500 border-candyRed-600 border-candyRed-700 border-candyRed-800 border-candyRed-900
+    border-candyPurple-100 border-candyPurple-200 border-candyPurple-300 border-candyPurple-400 border-candyPurple-500 border-candyPurple-600 border-candyPurple-700 border-candyPurple-800 border-candyPurple-900
+    border-candyTan-100 border-candyTan-200 border-candyTan-300 border-candyTan-400 border-candyTan-500 border-candyTan-600 border-candyTan-700 border-candyTan-800 border-candyTan-900;
+
+  @apply 
+    text-candyPink-100 text-candyPink-200 text-candyPink-300 text-candyPink-400 text-candyPink-500 text-candyPink-600 text-candyPink-700 text-candyPink-800 text-candyPink-900
+    text-candyYellow-100 text-candyYellow-200 text-candyYellow-300 text-candyYellow-400 text-candyYellow-500 text-candyYellow-600 text-candyYellow-700 text-candyYellow-800 text-candyYellow-900
+    text-candyBlue-100 text-candyBlue-200 text-candyBlue-300 text-candyBlue-400 text-candyBlue-500 text-candyBlue-600 text-candyBlue-700 text-candyBlue-800 text-candyBlue-900
+    text-candyGold-100 text-candyGold-200 text-candyGold-300 text-candyGold-400 text-candyGold-500 text-candyGold-600 text-candyGold-700 text-candyGold-800 text-candyGold-900
+    text-candyRed-100 text-candyRed-200 text-candyRed-300 text-candyRed-400 text-candyRed-500 text-candyRed-600 text-candyRed-700 text-candyRed-800 text-candyRed-900
+    text-candyPurple-100 text-candyPurple-200 text-candyPurple-300 text-candyPurple-400 text-candyPurple-500 text-candyPurple-600 text-candyPurple-700 text-candyPurple-800 text-candyPurple-900
+    text-candyTan-100 text-candyTan-200 text-candyTan-300 text-candyTan-400 text-candyTan-500 text-candyTan-600 text-candyTan-700 text-candyTan-800 text-candyTan-900;
 }
 @tailwind base;
 @tailwind components;
@@ -14,4 +38,10 @@
 /* Apply Bangers font to all heading elements DRYly */
 h1, h2, h3, h4, h5, h6 {
   @apply font-dynapuff;
+}
+.candy-border {
+  --b: 8px; /* border thickness  */
+  --g: repeating-linear-gradient(45deg,#BD1550 0 10px,#E97F02 0 20px,#F8CA00 0 30px);
+  border-image: var(--g) fill 0/calc(100% - var(--b)) 0 0/0 100vw 0 0 repeat;
+  padding-block: 10px;
 }

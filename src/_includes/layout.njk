@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="{{ '/assets/styles.generated.css' | url }}">
   </head>
   <body class="bg-candyTan-300 text-gray-900">
-    {% include "navbar.njk" %}
-    {{ content | safe }}
-    {% include "footer.njk" %}
+     {% include "navbar.njk" %}
+     {% include "force-tailwind-colors.njk" %}
+     {{ content | safe }}
+     {% include "footer.njk" %}
   </body>
 </html>
