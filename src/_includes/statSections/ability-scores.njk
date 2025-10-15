@@ -2,13 +2,13 @@
   <h2 class="text-4xl font-dynapuff font-bold text-left mb-6 tracking-wide flex justify-between items-center">SKILLS <span class="text-candyTan-800 uppercase text-2xl text-right">Proficiency Bonus : {{ character.proficiencyBonus.mod }}</span></h2>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
     {% for ability in abilities %}
-      <div class="bg-{{ ability.color }}-300 candy-border rounded-xl shadow p-2">
-        <div class="text-3xl md:text-4xl font-dynapuff font-bold text-{{ ability.color }}-500 w-full text-left py-2 uppercase">{{ ability.label }}</div>
+      <div class="bg-{{ ability.color }}-300 candy-border rounded-xl shadow p-4">
+        <div class="text-3xl md:text-4xl font-dynapuff font-bold text-{{ ability.color }}-500 w-full text-left py-4 uppercase">{{ ability.label }}</div>
         <div class="grid grid-cols-5 gap-2 items-start h-full">
           <div class="col-span-2 flex flex-col items-start w-full h-full justify-start">
             <div class="flex flex-col items-center w-full h-full">
-              <div class="border-2 border-{{ ability.color }}-700 rounded-lg w-full text-7xl font-gaegu text-{{ ability.color }}-900 bg-{{ ability.color }}-100 h-4/6 flex items-center justify-center">{{ character[ability.key].score }}</div>
-              <div class="border-2 border-{{ ability.color }}-700 rounded-full px-4 py-1 text-2xl font-gaegu text-{{ ability.color }}-900 bg-{{ ability.color }}-100 h-1/6 font-extrabold">{{ character[ability.key].mod }}</div>
+              <div class="border-2 border-{{ ability.color }}-700 rounded-lg w-full text-7xl font-gaegu text-{{ ability.color }}-200 bg-{{ ability.color }}-500 h-4/6 flex items-center justify-center font-extrabold">{{ character[ability.key].score }}</div>
+              <div class="border-2 border-{{ ability.color }}-700 rounded-full px-4 py-1 text-4xl font-dynapuff text-{{ ability.color }}-500 bg-{{ ability.color }}-100 h-1/6 font-bold">{{ character[ability.key].mod }}</div>
             </div>
           </div>
           <div class="col-span-3 flex flex-col items-start justify-center w-full h-full ">

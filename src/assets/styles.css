@@ -40,8 +40,11 @@ h1, h2, h3, h4, h5, h6 {
   @apply font-dynapuff;
 }
 .candy-border {
-  --b: 8px; /* border thickness  */
-  --g: repeating-linear-gradient(45deg,#BD1550 0 10px,#E97F02 0 20px,#F8CA00 0 30px);
-  border-image: var(--g) fill 0/calc(100% - var(--b)) 0 0/0 100vw 0 0 repeat;
+  --b: 15px; /* border thickness  */
+  --g: repeating-linear-gradient(45deg,#E85596 0 15px,#F9CF4A 0 30px,#54ADCB 0 45px,#D3CC10 0 60px,#DA3F40 0 75px,#B45FB0 0 90px);
+  border-width: var(--b);
+  border-style: solid;
+  border-image: var(--g) 1;
+  border-radius: 1rem;
   padding-block: 10px;
 }
