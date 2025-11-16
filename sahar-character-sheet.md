@@ -5,8 +5,8 @@
 - **Race:** Astral Elf (with Lunar Emphasis)
 - **Class:** Rogue
 - **Subclass:** Arcane Trickster (available at level 3)
-- **Level:** 1
-- **Background:** Criminal/Spy (recommended) or Entertainer (Acrobat)
+- **Level:** 2
+- **Background:** Hidden Light of the Moon — Moonlit Operative (custom)
 - **Alignment:** Lawful Good
 - **Experience Points:** 0
 
@@ -23,9 +23,9 @@
 *Rolled Stats: 15, 15, 15, 13, 10, 7*
 
 ## Combat Statistics
-- **Armor Class:** 13 (Leather Armor + Dex modifier)
-- **Hit Points:** 10 (8 + Con modifier)
-- **Hit Dice:** 1d8
+- **Armor Class:** 14 (Leather Armor + Dex modifier)
+- **Hit Points:** 17 (Level 1: 8 + Con +2 = 10; Level 2: +5 average + Con +2 = 17 total)
+- **Hit Dice:** 2d8
 - **Speed:** 30 feet
 - **Proficiency Bonus:** +2
 
@@ -33,26 +33,26 @@
 - **Dexterity:** +5 (proficient)
 - **Intelligence:** +5 (proficient)
 - **Strength:** -2
-- **Constitution:** +2
+- **Constitution:** +4
 - **Wisdom:** +0
 - **Charisma:** +1
 
 ## Skills
-### Proficient Skills (Rogue):
-- **Deception:** +3 (Cha + proficiency)
+### Proficient Skills (Rogue + Background):
+- **Performance:** +3 (Cha + proficiency)
 - **Insight:** +2 (Wis + proficiency)
 - **Investigation:** +5 (Int + proficiency)
 - **Perception:** +2 (Wis + proficiency)
 - **Sleight of Hand:** +5 (Dex + proficiency)
 - **Stealth:** +5 (Dex + proficiency)
 
-### Expertise (Level 1) - Choose 2:
-- **Stealth:** +7 (Dex + double proficiency) *[Recommended]*
-- **Sleight of Hand:** +7 (Dex + double proficiency) *[Recommended]*
+### Expertise (Level 1) - Chosen:
+- **Stealth:** +7 (Dex + double proficiency)
+- **Sleight of Hand:** +7 (Dex + double proficiency)
 
-### Background Skills (Criminal/Spy):
-- **Deception** (already selected)
-- **Stealth** (already selected)
+### Background Skills (Hidden Light of the Moon):
+- **Performance** (from background)
+- **Insight** (from background)
 
 ## Racial Features (Astral Elf)
 
@@ -80,17 +80,23 @@
 - Only need 4 hours for a long rest (instead of 8)
 - Remain semiconscious during trance
 
-## Class Features (Level 1 Rogue)
+## Class Features
 
-### **Sneak Attack**
+### **Sneak Attack** (Level 1)
 - **Damage:** 1d6 additional damage
 - **Requirements:** 
   - Attack with finesse or ranged weapon
   - Have advantage OR ally within 5 feet of target
   - Once per turn
 
-### **Thieves' Cant**
+### **Thieves' Cant** (Level 1)
 - Secret language known by rogues and criminals
+
+### **Cunning Action** (Level 2)
+- **Action Type:** Bonus Action
+- **Options:** Dash, Disengage, or Hide
+- **Important Note:** Cannot be used in the same turn as Starlight Step (both require bonus action)
+- **Tactical Consideration:** Choose between instant teleportation (Starlight Step) or repeated tactical movement/stealth (Cunning Action) each round
 
 ## Languages
 - **Common** (from race)
@@ -99,26 +105,25 @@
 
 ## Equipment & Armor
 
-### **Starting Equipment (Rogue)**
+### **Current Equipment**
 - **Armor:** Leather armor (11 + Dex modifier = AC 14)
 - **Weapons:**
+  - Rapier (recommended when available)
   - 2 daggers (finesse, light, thrown 20/60)
+  - Light crossbow with 20 bolts
+- **Tools:**
   - Thieves' tools
-  - Simple weapons, hand crossbows, longswords, rapiers, shortswords
+  - Disguise kit
+  - Harp
 - **Other Gear:**
   - Burglar's pack (backpack, bag of 1,000 ball bearings, 10 feet of string, bell, 5 candles, crowbar, hammer, 10 pitons, hooded lantern, 2 flasks of oil, 5 days rations, tinderbox, waterskin, 50 feet of hempen rope)
+- **Society Trinket:** A slim silver pin stamped with a crescent and a tiny hidden mirror
 
-### **Recommended Starting Equipment**
-- **Primary Weapon:** Rapier (1d8 piercing, finesse) *When available*
-- **Secondary Weapons:** 2 Daggers (1d4 piercing, finesse, light, thrown)
-- **Ranged Weapon:** Light crossbow with 20 bolts
-- **Armor:** Leather armor
-- **Tools:** Thieves' tools
-- **Starting Gold:** 4d4 × 10 gp (average 100 gp)
-
-### **Upgrade Path**
-- **Level 2+:** Studded leather armor (12 + Dex = AC 15)
-- **Later:** Consider multi-classing timing for spell access
+### **Recommended Level 2 Purchases (Priority Order)**
+1. **Studded leather armor** (12 + Dex = AC 15) - AC boost
+2. **Rapier** (if not already equipped) - 1d8 finesse weapon
+3. **Disguise supplies** - Extra disguise kit supplies, change-of-clothes sets, forged papers
+4. **Rescue tools** - Blankets, coin to pay innkeeper, medicine for rescued children
 
 ## Attack Options
 
@@ -162,63 +167,72 @@
 
 ## Combat Tactics
 
-### **Hit-and-Run Strategy**
-1. **Setup:** Use Stealth to gain advantage
-2. **Strike:** Attack with Sneak Attack damage
-3. **Escape:** Use Starlight Step (bonus action) to teleport away
-4. **Repeat:** Hide again for next round's advantage
+### **Hit-and-Run Strategy (with Cunning Action)**
+1. **Attack:** Strike with Sneak Attack damage
+2. **Hide:** Use Cunning Action (bonus action) to Hide
+3. **Vanish:** Disappear into cover for next round's advantage
+4. **Repeat:** Maintain stealth and advantage each round
 
-### **Acrobatic Combat Style**
-- Incorporate flips and gymnastics into attacks (flavor)
-- Use Starlight Step for dramatic teleportation strikes
-- Position behind enemies or in hard-to-reach places
+### **Teleport-Escape Combo**
+1. **Attack:** Strike with Sneak Attack damage
+2. **Teleport:** Use Starlight Step (bonus action) to teleport 30 feet away
+3. **Note:** Forgo Cunning Action that round (both use bonus action)
 
-### **Battlefield Control**
-- Focus on isolating single targets
-- Use terrain and positioning to your advantage
-- Coordinate with allies for Sneak Attack opportunities
+### **Disengage Retreat**
+1. **Attack:** Strike with Sneak Attack damage
+2. **Disengage:** Use Cunning Action (bonus action) to Disengage
+3. **Move:** Move through dangerous terrain without provoking opportunity attacks
+
+### **Bonus Action Management**
+- **Starlight Step:** Limited to 2 uses per long rest - save for crucial moments
+- **Cunning Action:** Unlimited use - default tactical option for most turns
+- **Cannot use both** in the same turn - plan which is more valuable each round
 
 ## Level Progression Notes
 
-### **Level 2**
-- Gain **Cunning Action** (Dash, Disengage, or Hide as bonus action)
-- Consider multiclassing timing if planning Arcane Trickster
+### **Level 2 (Current)**
+- **Cunning Action** unlocked - Dash, Disengage, or Hide as bonus action
+- Note bonus action conflict with Starlight Step
 
-### **Level 3 (If staying pure Rogue)**
-- **Arcane Trickster Subclass:**
-  - Spellcasting (Wizard spells, focus on Illusion/Enchantment)
-  - **Mage Hand Legerdemain**
-  - 2 Cantrips, 3 Level 1 spells
+### **Level 3 (Planned: Arcane Trickster)**
+- **Spellcasting** (Wizard spells, focus on Illusion/Enchantment)
+- **Mage Hand Legerdemain**
+- **Planned Cantrips:**
+  - Mage Hand (required)
+  - Minor Illusion
+  - Booming Blade or Prestidigitation
+- **Planned 1st-level Spells:**
+  - Find Familiar (owl for Help action)
+  - Silent Image (battlefield control)
+  - Disguise Self or Charm Person
 
-### **Recommended Cantrips (Level 3)**
-- **Mage Hand** (Arcane Trickster feature)
-- **Minor Illusion** (create distractions and cover)
+### **Level 4**
+- ASI / Feat choice
 
-### **Recommended Level 1 Spells (Level 3)**
-- **Find Familiar** (owl for Help action)
-- **Silent Image** (battlefield control)
-- **Disguise Self** (infiltration)
+## Roleplay Hooks & Training Beats
 
-## Notes for Player
+### **Training Milestones (Level 2)**
+- **Hidden Light Exercise:** Perform a public harp set while listening for whispers of abuse and arranging a rescue behind the scenes
+- **Moonlit Persona Practice:** Use your Moonlit Persona feature in a low-risk mission to test and refine a new cover identity
+- **New Responsibility:** Sister Imane assigns a small extraction - retrieve a ledger from a steward's chest and escort a widow's child to a safehouse
 
-### **Roleplaying Sahar**
-- Emphasize her acrobatic fighting style with descriptive combat
-- Her lunar connection can influence her mood and tactics
-- She's primarily a combatant, not a social character
-- Takes pride in precision and technique over brute force
+### **Character Development**
+- **Role:** Mobile skirmisher and covert operative for Hidden Light of the Moon
+- **Personality:** Precise, lunar-themed, dedicated to protecting the vulnerable
+- **Background:** Works with secret society rescuing children from abuse
 
 ### **Tactical Reminders**
 - Always look for Sneak Attack opportunities
-- Starlight Step is limited use - save for crucial moments
-- Your high Intelligence will make spells very effective once you get them
+- Manage bonus actions carefully (Starlight Step vs Cunning Action)
+- Your high Intelligence will make spells very effective at level 3
 - Consider positioning and escape routes before engaging
 
 ### **Equipment Priorities**
-1. Better armor (studded leather)
-2. Magic items that enhance mobility or stealth
-3. Improved weapons (magic daggers/rapier)
-4. Items that support spellcasting once available
+1. Studded leather armor (AC boost)
+2. Rapier (if not equipped)
+3. Disguise supplies and forged papers
+4. Tools to care for rescued children
 
 ---
 
-*This character sheet represents Sahar at Level 1. As she progresses and gains access to Arcane Trickster features at Level 3, her tactical options will expand significantly with spellcasting abilities.*
+*This character sheet represents Sahar at Level 2. At Level 3, she will gain Arcane Trickster features, significantly expanding her tactical options with spellcasting abilities.*
