@@ -105,9 +105,10 @@ You can always find a place to stay by offering encouragement, music, and kindne
 ## Spell Reference Guide
 
 ### Cantrips
-- **Vicious Mockery:** 60 ft, 1d4 psychic, disadvantage on next attack. Non-lethal, playful.
-- **Friends:** Advantage on Charisma checks for 1 min. Target becomes hostile after.
+- **Message:** 120 ft, whisper a message to a creature, who can whisper back; no one else hears. Private encouragement or coaching.
+- **Dancing Lights:** 120 ft, create up to 4 floating lights or one glowing humanoid for 1 min, controllable. Joyful messages, distractions, or inspiration.
 - **Minor Illusion:** Create sound/image, 30 ft, lasts 1 min. Distraction, misdirection.
+- **Blade Ward:** Reaction when hit by weapon attack, take half damage until your next turn. Defensive forgiveness and resilience.
 
 ### Level 1 Spells (5 Known, 2 cast/day)
 - **Sleep:** 90 ft, affects 5d8 HP, puts creatures to sleep. Non-lethal crowd control.
@@ -152,7 +153,7 @@ You can always find a place to stay by offering encouragement, music, and kindne
 | Charisma     | 18    | +4  | Spellcasting, social skills, Inspiration     |
 
 **HP:** 17 | **AC:** 15 | **Speed:** 30 ft | **Bardic Inspiration:** 4/day (d6)  
-**Spell Slots:** 2 (1st level) | **Spells Known:** 5 (1st level) + 3 cantrips  
+**Spell Slots:** 2 (1st level) | **Spells Known:** 5 (1st level) + 4 cantrips  
 **Skills:** Performance, Persuasion, Insight, Sleight of Hand, Acrobatics, Deception, Perception
 
 ---
@@ -161,14 +162,17 @@ You can always find a place to stay by offering encouragement, music, and kindne
 
 **Action:** Cast a spell or cantrip  
 **Bonus Action:** Healing Word, Bardic Inspiration  
+**Reaction:** Blade Ward (halve weapon damage)  
 **Use Inspiration:** d6 for ally roll (attack, ability, save)  
 **Jack of All Trades:** +1 to untrained checks  
 **Song of Rest:** Extra 1d6 healing on short rests  
 **Sleep:** End fight swiftly, non-lethally  
 **Charm Person:** Make friend, avoid combat  
 **Calm Emotions:** Diffuse tension, invite peace  
-**Vicious Mockery:** Hurt feelings, disadvantage  
-**Minor Illusion:** Trick, distract, create opportunity
+**Message:** Private whisper for coaching  
+**Dancing Lights:** Lights or humanoid for joyful messages  
+**Minor Illusion:** Trick, distract, create opportunity  
+**Blade Ward:** Defensive, forgive attacks
 
 ---
 
