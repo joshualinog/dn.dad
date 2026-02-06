@@ -1,0 +1,136 @@
+{
+  "name": "Dahg",
+  "alignment": "Neutral Good",
+  "player": {
+    "name": "Unknown (imported)"
+  },
+  "race": {
+    "name": "Locathah"
+  },
+  "classes": [
+    {
+      "name": "Bard",
+      "levels": 1,
+      "subclass": "College of Glamour"
+    }
+  ],
+  "background": {
+    "name": "Joyful Shepherd (Custom)",
+    "description": "You can always find a place to stay by offering encouragement, music, and kindness. Communities welcome you, and you can diffuse most tensions with your joyful presence."
+  },
+  "speed": {
+    "Walk": 30,
+    "Swim": 30
+  },
+  "hit_points": {
+    "max": 10
+  },
+  "armor_class": {
+    "value": 15,
+    "description": "AC = 12 + Dex modifier (use if higher than leather armor)."
+  },
+  "inspiration": "Ted Lasso, Tom Bombadil, Michael (your brother)",
+  "ability_scores": {
+    "str": 14,
+    "dex": 17,
+    "con": 15,
+    "int": 13,
+    "wis": 17,
+    "cha": 18
+  },
+  "saving_throws": {
+    "dex": 5,
+    "cha": 6
+  },
+  "skills": {
+    "Athletics": 2,
+    "SleightOfHand": 5,
+    "Acrobatics": 5,
+    "Insight": 5,
+    "Perception": 5,
+    "Performance": 6,
+    "Persuasion": 6,
+    "Deception": 6
+  },
+  "languages": [
+    "Common",
+    "Aquan",
+    "Elvish"
+  ],
+  "treasure": {
+    "gp": 15
+  },
+  "weapons": [
+    {
+      "name": "Rapier",
+      "damage": {
+        "dice": {
+          "count": 1,
+          "sides": 8,
+          "mod": 3
+        },
+        "type": "Piercing"
+      }
+    }
+  ],
+  "equipment": [
+    {
+      "name": "Leather armor"
+    },
+    {
+      "name": "Rapier or dagger"
+    },
+    {
+      "name": "Banjo/guitar/drum, Herbalism kit"
+    },
+    {
+      "name": "Diplomat’s pack, hammock, pouch of herbal teas, simple clothes, community token"
+    }
+  ],
+  "spells": [
+    {
+      "name": "Vicious Mockery",
+      "level": 0
+    },
+    {
+      "name": "Friends",
+      "level": 0
+    },
+    {
+      "name": "Minor Illusion",
+      "level": 0
+    },
+    {
+      "name": "Sleep",
+      "level": 1
+    },
+    {
+      "name": "Healing Word",
+      "level": 1
+    },
+    {
+      "name": "Charm Person",
+      "level": 1
+    },
+    {
+      "name": "Heroism",
+      "level": 1
+    },
+    {
+      "name": "Tasha’s Hideous Laughter",
+      "level": 1
+    },
+    {
+      "name": "Faerie Fire",
+      "level": 1
+    },
+    {
+      "name": "Dissonant Whispers",
+      "level": 1
+    }
+  ],
+  "details": {
+    "backstory": "You can always find a place to stay by offering encouragement, music, and kindness. Communities welcome you, and you can diffuse most tensions with your joyful presence.",
+    "personality": "Always encourage, invite, and uplift.\nAvoid violence; use sleep, charm, and creative spells.\nSeek underdogs and outsiders—make them the main character.\nRest often, and teach others the power of joy and downtime.\nUse your instrument as both tool and symbol of hope."
+  }
+}

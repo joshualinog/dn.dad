@@ -1,0 +1,27 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "Race.schema.json",
+    "title": "D&D 5e Race",
+    "description": "JSON Schema for D&D 5e Race data.",
+    "$comment": "version 0.1.1",
+    "type": "object",
+    "required": ["name"],
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "speed": {
+            "type": "integer"
+        },
+        "features": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": { "type": "string" },
+                    "desc": { "type": "string" }
+                }
+            }
+        }
+    }
+}

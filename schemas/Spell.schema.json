@@ -1,0 +1,32 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "Spell.schema.json",
+    "title": "D&D 5e Spell schema",
+    "description": "JSON Schema for D&D 5e Spell data.",
+    "$comment": "version 0.1.1",
+    "type": "object",
+    "required": ["name"],
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "level": {
+            "type": "integer",
+            "default": 0
+        },
+        "school": {
+            "type": "string"
+        },
+        "components": {
+            "type": "object",
+            "properties": {
+                "verbal": { "type": "boolean" },
+                "somatic": { "type": "boolean" },
+                "material": { "type": "boolean" }
+            }
+        },
+        "desc": {
+            "type": "string"
+        }
+    }
+}

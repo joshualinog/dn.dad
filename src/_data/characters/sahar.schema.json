@@ -1,0 +1,98 @@
+{
+  "name": "Sahar",
+  "alignment": "Lawful Good",
+  "player": {
+    "name": "Unknown (imported)"
+  },
+  "race": {
+    "name": "Astral Elf (Lunar Emphasis)"
+  },
+  "classes": [
+    {
+      "name": "Rogue",
+      "levels": 1,
+      "subclass": "Arcane Trickster"
+    }
+  ],
+  "background": {
+    "name": "Criminal/Spy"
+  },
+  "speed": {
+    "Walk": 30,
+    "Swim": 0
+  },
+  "hit_points": {
+    "max": 10
+  },
+  "armor_class": {
+    "value": 14
+  },
+  "ability_scores": {
+    "str": 7,
+    "dex": 16,
+    "con": 15,
+    "int": 17,
+    "wis": 10,
+    "cha": 13
+  },
+  "saving_throws": {
+    "str": -2,
+    "dex": 5,
+    "con": 2,
+    "int": 5,
+    "wis": 0,
+    "cha": 1
+  },
+  "skills": {
+    "Athletics": -2,
+    "Stealth": 7,
+    "SleightOfHand": 7,
+    "Acrobatics": 5,
+    "Investigation": 5,
+    "Arcana": 3,
+    "History": 3,
+    "Nature": 3,
+    "Religion": 3,
+    "Insight": 2,
+    "Medicine": 0,
+    "Perception": 2,
+    "Survival": 0,
+    "AnimalHandling": 0,
+    "Deception": 3,
+    "Performance": 1,
+    "Persuasion": 1,
+    "Intimidation": 1
+  },
+  "languages": [
+    "Common",
+    "Elvish",
+    "Thieves' Cant"
+  ],
+  "treasure": {
+    "gp": 100
+  },
+  "weapons": [],
+  "equipment": [
+    {
+      "name": "Leather armor"
+    },
+    {
+      "name": "2 daggers, light crossbow (20 bolts)"
+    },
+    {
+      "name": "Thieves' tools"
+    },
+    {
+      "name": "Burglar's pack"
+    }
+  ],
+  "spells": [
+    {
+      "name": "Sacred Flame",
+      "level": 0
+    }
+  ],
+  "details": {
+    "personality": "Acrobatic fighter with lunar spiritual connection\nIncorporates flips and gymnastics (flavor)\nBattlefield tactics over social manipulation\nPrecise and honorable"
+  }
+}

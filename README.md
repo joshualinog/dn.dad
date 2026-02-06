@@ -1,6 +1,10 @@
 # D&D Character Repository
 
+[![Validate Characters](https://github.com/joshualinog/dn.dad/actions/workflows/validate-characters.yml/badge.svg?branch=main)](https://github.com/joshualinog/dn.dad/actions/workflows/validate-characters.yml)
+
 This repository contains D&D 5e character sheets and resources.
+
+**Schema validation:** Run `npm run validate:characters` to convert and validate all character JSON files into schema-compliant exports (`src/_data/characters/*.schema.json`).
 
 ## Characters
 

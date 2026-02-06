@@ -1,0 +1,13 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "feature.schema.json",
+    "title": "JSON Schema for features.",
+    "description": "Feature schema for classes and races.",
+    "$comment": "version 0.1.1",
+    "type": "object",
+    "required": ["name"],
+    "properties": {
+        "name": { "type": "string" },
+        "desc": { "type": "string" }
+    }
+}
