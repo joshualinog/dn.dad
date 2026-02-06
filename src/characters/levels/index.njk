@@ -1,0 +1,27 @@
+---
+pagination:
+  data: snapshotsIndexArray
+  size: 1
+  alias: charEntry
+permalink: "/characters/{{ charEntry.character | slug }}/levels/"
+layout: layout.njk
+---
+
+<section class="container mx-auto px-4 py-8">
+  <div class="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow">
+    <div class="text-center mb-4">
+      <h1 class="text-3xl font-bold">{{ charEntry.character | capitalize }} — Snapshots</h1>
+      <p class="text-sm text-gray-600">{{ charEntry.total }} snapshot(s). Jump to pages below.</p>
+    </div>
+
+    <div class="grid grid-cols-3 gap-2">
+      {% for lv in charEntry.levels %}
+        <a href="{{ lv }}/" class="px-3 py-2 bg-white border rounded text-center">Level {{ lv }}</a>
+      {% endfor %}
+    </div>
+
+    <div class="mt-6 text-center">
+      <a class="px-3 py-2 bg-indigo-700 text-white rounded" href="pages/1/">View paginated snapshots (page 1)</a>
+    </div>
+  </div>
+</section>

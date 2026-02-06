@@ -1,11 +1,11 @@
 {
   "abilities": [
-    { "label": "Intelligence", "key": "i", "color": "candyPink" },
-    { "label": "Strength", "key": "s", "color": "candyYellow" },
-    { "label": "Wisdom", "key": "w", "color": "candyBlue" },
-    { "label": "Dexterity", "key": "d", "color": "candyGold" },
-    { "label": "Constitution", "key": "c", "color": "candyRed" },
-    { "label": "Charisma", "key": "ch", "color": "candyPurple" }
+    { "label": "Intelligence", "key": "intelligence", "color": "candyPink" },
+    { "label": "Strength", "key": "strength", "color": "candyYellow" },
+    { "label": "Wisdom", "key": "wisdom", "color": "candyBlue" },
+    { "label": "Dexterity", "key": "dexterity", "color": "candyGold" },
+    { "label": "Constitution", "key": "constitution", "color": "candyRed" },
+    { "label": "Charisma", "key": "charisma", "color": "candyPurple" }
   ],
   "proficiencyBonus": {
     "label": "Proficiency Bonus",

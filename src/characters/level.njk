@@ -1,0 +1,83 @@
+---
+pagination:
+  data: snapshotList
+  size: 1
+  alias: snapshot
+permalink: "/characters/{{ snapshot.character | slug }}/levels/{{ snapshot.level }}/"
+layout: layout.njk
+---
+
+<section class="container mx-auto px-4 py-8">
+  <div class="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow">
+    <div class="text-center mb-4">
+      <h1 class="text-3xl font-bold">{{ snapshot.data.name }} — Level {{ snapshot.level }}</h1>
+      <a class="text-sm text-blue-600" href="../../">Back to character</a>
+    </div>
+
+    <div class="mb-4">
+      <strong>Class:</strong>
+      {% if snapshot.data.classes and snapshot.data.classes[0] %}
+        {{ snapshot.data.classes[0].name }} ({{ snapshot.data.classes[0].levels }})
+      {% endif %}
+      <br />
+      <strong>Race:</strong> {{ snapshot.data.race.name }}
+    </div>
+
+    <div class="grid grid-cols-2 gap-4">
+      <div class="border p-3 rounded">
+        <div class="font-bold mb-2">Stats</div>
+        <ul>
+          <li>HP: {{ snapshot.data.hit_points.max }}</li>
+          <li>AC: {{ snapshot.data.armor_class.value }}</li>
+        </ul>
+        <div class="mt-2">
+          <div class="font-bold">Ability Scores</div>
+          <ul>
+            {% for k,v in snapshot.data.ability_scores %}
+              <li>{{ k | upper }}: {{ v }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+      <div class="border p-3 rounded">
+        <div class="font-bold mb-2">Spells / Weapons</div>
+        <div>
+          <div class="font-semibold">Spells:</div>
+          <ul>
+            {% for s in snapshot.data.spells %}
+              <li>{{ s.name }} (level {{ s.level }})</li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="mt-2">
+          <div class="font-semibold">Weapons:</div>
+          <ul>
+            {% for w in snapshot.data.weapons %}
+              <li>
+                {{ w.name }} —
+                {% if w.damage and w.damage.dice %}
+                  {{ w.damage.dice.count }}d{{ w.damage.dice.sides }}{% if w.damage.dice.mod %}+{{ w.damage.dice.mod }}{% endif %}
+                {% endif %}
+                {% if w.damage and w.damage.type %} ({{ w.damage.type }}){% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-4 border p-3 rounded">
+      <div class="font-bold mb-2">Details & Notes</div>
+      <div>
+        {% if snapshot.data.details and snapshot.data.details.backstory %}
+          <div class="mb-2">{{ snapshot.data.details.backstory }}</div>
+        {% endif %}
+        {% if snapshot.data.details and snapshot.data.details.personality %}
+          <div>{{ snapshot.data.details.personality }}</div>
+        {% endif %}
+      </div>
+    </div>
+
+  </div>
+</section>

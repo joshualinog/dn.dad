@@ -1,0 +1,25 @@
+---
+pagination:
+  data: snapshotPages
+  size: 1
+  alias: snapPage
+permalink: "/characters/{{ snapPage.character }}/levels/pages/{{ snapPage.pageNumber }}/"
+layout: layout.njk
+---
+
+<h1>Snapshot list — page {{ snapPage.pageNumber }}</h1>
+<p>Character: {{ snapPage.character }}</p>
+<ul>
+  {% for s in snapPage.snapshots %}
+    <li><a href="../{{ s.level }}/">Level {{ s.level }}</a> — {{ s.data.snapshot_at or 'unknown' }}</li>
+  {% endfor %}
+</ul>
+
+<div class="flex justify-between mt-6">
+  {% if snapPage.pageNumber > 1 %}
+    <a href="pages/{{ snapPage.pageNumber - 1 }}/">&larr; Prev</a>
+  {% endif %}
+  {% if snapPage.pageNumber < snapPage.totalPages %}
+    <a href="pages/{{ snapPage.pageNumber + 1 }}/">Next &rarr;</a>
+  {% endif %}
+</div>

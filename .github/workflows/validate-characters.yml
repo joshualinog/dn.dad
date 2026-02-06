@@ -33,3 +33,15 @@ jobs:
 
       - name: Run character validation
         run: npm run validate:characters
+
+      - name: Run character tests
+        run: npm run test:characters
+
+      - name: Build site
+        run: npm run build
+
+      - name: Run snapshot tests
+        run: npm run test:snapshots
+
+      - name: Run smoke tests (built pages)
+        run: npm run test:smoke

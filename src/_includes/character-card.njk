@@ -1,0 +1,81 @@
+{# This is the reusable character card include. Use it in pages where you want a compact
+   character summary (e.g. the home page). It was previously located at `src/character.njk`.
+#}
+
+<section class="max-w-6xl mx-auto bg-white dark:bg-gray-800 p-8 rounded shadow grid grid-cols-1 md:grid-cols-3 gap-8">
+  <!-- Left Column -->
+  <div class="md:col-span-1 flex flex-col gap-4">
+    <div class="border p-4 rounded mb-2">
+      <h1 class="text-3xl font-bold mb-2">{{ character.name }}</h1>
+      <div><strong>Background:</strong> {{ character.background }}</div>
+      <div><strong>Species:</strong> {{ character.race }}</div>
+      <div><strong>Class:</strong> {{ character.class }}{% if character.subclass %} ({{ character.subclass }}){% endif %}</div>
+      <div><strong>Level:</strong> {{ character.level }}</div>
+    </div>
+    <div class="grid grid-cols-2 gap-2 mb-2">
+      <div class="border p-2 rounded text-center">
+        <div class="font-bold">Proficiency Bonus</div>
+        <div>{{ character.proficiencyBonus }}</div>
+      </div>
+      {% for ability, value in character.abilities %}
+      <div class="border p-2 rounded text-center">
+        <div class="font-bold">{{ ability | capitalize }}</div>
+        <div>Score: {{ value.score }}</div>
+        <div>Mod: {{ value.modifier }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Center Column -->
+  <div class="md:col-span-1 flex flex-col gap-4">
+    <div class="grid grid-cols-4 gap-2 mb-2">
+      <div class="border p-2 rounded text-center">
+        <div class="font-bold">HP</div>
+        <div>{{ character.hp }}</div>
+      </div>
+      <div class="border p-2 rounded text-center">
+        <div class="font-bold">AC</div>
+        <div>{{ character.ac }}</div>
+      </div>
+      <div class="border p-2 rounded text-center">
+        <div class="font-bold">Hit Dice</div>
+        <div>1d8</div>
+      </div>
+      <div class="border p-2 rounded text-center">
+        <div class="font-bold">Death Saves</div>
+        <div>Success/Failure</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Column -->
+  <div class="md:col-span-1 flex flex-col items-center gap-4">
+    {% if character.image %}
+      <img src="{{ character.image }}" alt="{{ character.name }} portrait" class="rounded-lg shadow mb-4 w-full max-w-xs">
+    {% endif %}
+    <div class="border p-2 rounded w-full mb-2">
+      <div class="font-bold mb-1">Coins</div>
+      <table class="w-full text-left border mb-2">
+        <thead>
+          <tr>
+            <th>Copper</th>
+            <th>Silver</th>
+            <th>Electrum</th>
+            <th>Gold</th>
+            <th>Platinum</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ character.coins.copper }}</td>
+            <td>{{ character.coins.silver }}</td>
+            <td>{{ character.coins.electrum }}</td>
+            <td>{{ character.coins.gold }}</td>
+            <td>{{ character.coins.platinum }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

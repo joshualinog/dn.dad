@@ -1,28 +1,5 @@
-#!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
-const Ajv = require('ajv').default;
-
-const SCHEMAS_DIR = path.join(__dirname, '..', 'schemas');
-const CHAR_DIR = path.join(__dirname, '..', 'src', '_data', 'characters');
-
-// Use shared conversion utilities
-const { convert: convertCharacter, loadSchemas: loadSchemasFromUtils } = require('./character-utils');
-
-function loadSchemas(ajv) {
-  const files = fs.readdirSync(SCHEMAS_DIR).filter(f => f.endsWith('.json') || f.endsWith('.js'));
-  files.forEach(f => {
-    const p = path.join(SCHEMAS_DIR, f);
-    const raw = fs.readFileSync(p, 'utf8');
-    try {
-      const s = JSON.parse(raw);
-      const id = s.$id || f;
-      ajv.addSchema(s, id);
-    } catch (e) {
-      console.warn('Skipping schema', f, e.message);
-    }
-  });
-}
 
 function parseMod(mod) {
   if (typeof mod === 'number') return mod;
@@ -141,6 +118,7 @@ function convert(d) {
       });
     }
   });
+
   if (d.languages) out.languages = d.languages;
   out.treasure = { gp: (d.coins && d.coins.gold) ? d.coins.gold : 0 };
   out.weapons = [];
@@ -150,6 +128,10 @@ function convert(d) {
       if (/rapier/i.test(a.name)) {
         const dice = parseDice(a.value);
         out.weapons.push({ name: 'Rapier', damage: { dice: dice || { count:1, sides:8, mod:0 }, type: 'Piercing' } });
+      }
+      if (/dagger/i.test(a.name)) {
+        const dice = parseDice(a.value);
+        out.weapons.push({ name: 'Dagger', damage: { dice: dice || { count:1, sides:4, mod:0 }, type: 'Piercing' } });
       }
     });
   }
@@ -171,49 +153,20 @@ function convert(d) {
   return out;
 }
 
-function main() {
-  const ajv = new Ajv({ allErrors: true, strict: false });
-  // load vendored schemas
-  loadSchemasFromUtils(ajv);
-  const characterSchema = ajv.getSchema('Character.schema.json') || ajv.getSchema('Character.schema.json#');
-  if (!characterSchema) {
-    console.error('Could not find Character.schema.json in schemas dir. Make sure schemas were installed.');
-    process.exit(2);
-  }
-
-  const files = fs.readdirSync(CHAR_DIR).filter(f => f.endsWith('.json') && !f.endsWith('.schema.json'));
-  if (!files.length) {
-    console.log('No character files found.');
-    return;
-  }
-
-  let failed = 0;
-  files.forEach(file => {
+function loadSchemas(ajv, schemasDir) {
+  const SCHEMAS_DIR = schemasDir || path.join(__dirname, '..', 'schemas');
+  const files = fs.readdirSync(SCHEMAS_DIR).filter(f => f.endsWith('.json') || f.endsWith('.js'));
+  files.forEach(f => {
+    const p = path.join(SCHEMAS_DIR, f);
+    const raw = fs.readFileSync(p, 'utf8');
     try {
-      const raw = fs.readFileSync(path.join(CHAR_DIR, file), 'utf8');
-      const src = JSON.parse(raw);
-      const converted = convertCharacter(src);
-      const valid = characterSchema(converted);
-      const outPath = path.join(CHAR_DIR, file.replace(/\.json$/, '.schema.json'));
-      fs.writeFileSync(outPath, JSON.stringify(converted, null, 2));
-      if (!valid) {
-        failed++;
-        console.error(`Validation failed for ${file}:`);
-        console.error(JSON.stringify(characterSchema.errors, null, 2));
-      } else {
-        console.log(`Converted and validated ${file} -> ${path.relative(process.cwd(), outPath)}`);
-      }
+      const s = JSON.parse(raw);
+      const id = s.$id || f;
+      ajv.addSchema(s, id);
     } catch (e) {
-      failed++;
-      console.error(`Error processing ${file}: ${e.message}`);
+      console.warn('Skipping schema', f, e.message);
     }
   });
-
-  if (failed) {
-    console.error(`${failed} file(s) failed validation or processing.`);
-    process.exit(1);
-  }
-  console.log('All characters converted and validated successfully.');
 }
 
-main();
+module.exports = { parseMod, parseDice, parseSpeed, skillKeyMap, convert, loadSchemas };

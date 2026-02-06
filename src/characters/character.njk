@@ -35,6 +35,21 @@ layout: layout.njk
     <div class="text-gray-700">{{ character.heroicInspiration }}</div>
   </div>
 
+  <!-- Snapshots -->
+  {% set snapshots = snapshotsIndex[character._slug] if snapshotsIndex and character._slug in snapshotsIndex else null %}
+  {% if snapshots %}
+  <div class="border rounded-lg p-4 mb-6 bg-blue-50">
+    <div class="text-lg font-bold text-blue-700 mb-2">Snapshots</div>
+    <div class="text-gray-700">View historical snapshots for this character:</div>
+    <div class="mt-2 flex gap-2">
+      <a href="levels/" class="px-3 py-1 bg-white border rounded">All snapshots</a>
+      {% for lv in snapshots %}
+        <a href="levels/{{ lv }}/" class="px-3 py-1 bg-white border rounded">Level {{ lv }}</a>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
   <!-- Equipment Training & Proficiencies -->
   <div class="border rounded-lg p-4 bg-gray-50">
     <div class="text-lg font-bold text-gray-800 mb-2">Equipment Training & Proficiencies</div>
@@ -58,25 +73,44 @@ layout: layout.njk
     </table>
   </div>
 </div>
-  <p class="mb-2"><strong>Level:</strong> {{ character.level }}</p>
+  {% set effectiveLevel = character.level %}
+  {% if not effectiveLevel and character.classes and character.classes[0] %}
+    {% set effectiveLevel = character.classes[0].levels %}
+  {% endif %}
+  <p class="mb-2"><strong>Level:</strong> {{ effectiveLevel }}</p>
   <p class="mb-2"><strong>Background:</strong> {{ character.background }}</p>
   <p class="mb-2"><strong>Alignment:</strong> {{ character.alignment }}</p>
   <h2 class="text-xl font-semibold mt-6 mb-2">Abilities</h2>
   <ul>
-    {% for ability, value in character.abilities %}
-      <li>{{ ability | capitalize }}: {{ value.score }} ({{ value.modifier }})</li>
+    {% for ability in dndStats.abilities %}
+      {% set val = character[ability.key] %}
+      {% if val %}
+        <li>{{ ability.label }}: {{ val.score }} ({{ val.mod }})</li>
+      {% else %}
+        <li>{{ ability.label }}: —</li>
+      {% endif %}
     {% endfor %}
   </ul>
   <h2 class="text-xl font-semibold mt-6 mb-2">Skills</h2>
   <ul>
-    {% for skill in character.skills %}
-      <li>{{ skill }}</li>
+    {% for ability in dndStats.abilities %}
+      {% set val = character[ability.key] %}
+      {% if val and val.skills %}
+        {% for skill in val.skills %}
+          <li>{{ skill.name }} {{ skill.mod or '' }} {% if skill.proficient %}★{% endif %}{% if skill.expert %} ✦{% endif %}</li>
+        {% endfor %}
+      {% endif %}
     {% endfor %}
   </ul>
   <h2 class="text-xl font-semibold mt-6 mb-2">Skill Modifiers</h2>
   <ul>
-    {% for skill in character.keySkills %}
-      <li>{{ skill.name }}: {{ skill.value }}</li>
+    {% for ability in dndStats.abilities %}
+      {% set val = character[ability.key] %}
+      {% if val and val.skills %}
+        {% for skill in val.skills %}
+          <li>{{ skill.name }}: {{ skill.mod }}</li>
+        {% endfor %}
+      {% endif %}
     {% endfor %}
   </ul>
   <h2 class="text-xl font-semibold mt-6 mb-2">Equipment</h2>

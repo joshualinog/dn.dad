@@ -4,11 +4,12 @@
   "species": "Locathah",
   "class": "Bard",
   "subclass": "College of Glamour",
-  "level": 1,
+  "level": 2,
   "alignment": "Neutral Good",
   "inspiration": "Ted Lasso, Tom Bombadil, Michael (your brother)",
   "ac": 15,
-  "hp": 10,
+  "hp": 17,
+  "initiative": 3,
   "speed": "30 ft (swim 30 ft)",
   "proficiencyBonus": { "score": 2, "mod": "+2" },
   "heroicInspiration": "Radiant Encouragement: You can always find a place to stay by offering encouragement, music, and kindness. Communities welcome you, and you can diffuse most tensions with your joyful presence.",
@@ -62,7 +63,7 @@
   "coins": {
     "gold": 15
   },
-  "languages": ["Common", "Aquan", "Elvish"],
+  "languages": ["Common", "Aquan", "Elvish", "Sylvan"],
   "specialAbilities": [
     { "name": "Amphibious", "description": "Can breathe air and water." },
     {
@@ -83,6 +84,14 @@
     {
       "name": "Bardic Inspiration (d6, 4/day)",
       "description": "Bonus action, within 60 ft, add d6 to ability check, attack roll, or saving throw."
+    },
+    {
+      "name": "Jack of All Trades",
+      "description": "Add half your proficiency bonus (+1) to any ability check that doesn't already include a proficiency bonus."
+    },
+    {
+      "name": "Song of Rest",
+      "description": "During a short rest, creatures that hear your soothing music or oration regain an extra 1d6 hit points when spending Hit Dice to heal."
     }
   ],
   "backgroundFeature": {
@@ -109,8 +118,8 @@
     "Refuses complexity, oversimplifies reality and evil."
   ],
   "spells": {
-    "cantrips": ["Vicious Mockery", "Friends", "Minor Illusion"],
-    "level1": ["Sleep", "Healing Word", "Charm Person", "Heroism"],
+    "cantrips": ["Message", "Dancing Lights", "Minor Illusion", "Blade Ward"],
+    "level1": ["Sleep", "Healing Word", "Charm Person", "Heroism", "Calm Emotions"],
     "optional": [
       "Tasha’s Hideous Laughter",
       "Faerie Fire",

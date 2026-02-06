@@ -8,7 +8,11 @@
     "start": "npm-run-all --parallel watch:css serve",
     "watch:css": "postcss src/assets/styles.css -o src/assets/styles.generated.css --watch",
     "serve": "eleventy --serve",
-    "validate:characters": "node scripts/convert-and-validate-all-characters.js"
+    "validate:characters": "node scripts/convert-and-validate-all-characters.js",
+    "snapshot:levels": "node scripts/snapshot-current-levels.js",
+    "test:characters": "node scripts/test-characters.js",
+    "test:snapshots": "node scripts/test-snapshots.js",
+    "test:smoke": "node scripts/test-smoke.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
