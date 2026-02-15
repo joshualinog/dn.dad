@@ -10,19 +10,19 @@
   "classes": [
     {
       "name": "Rogue",
-      "levels": 1,
+      "levels": 3,
       "subclass": "Arcane Trickster"
     }
   ],
   "background": {
-    "name": "Criminal/Spy"
+    "name": "Hidden Light of the Moon (Custom)"
   },
   "speed": {
     "Walk": 30,
     "Swim": 0
   },
   "hit_points": {
-    "max": 10
+    "max": 24
   },
   "armor_class": {
     "value": 14
@@ -111,8 +111,24 @@
   ],
   "spells": [
     {
-      "name": "Sacred Flame",
+      "name": "Mage Hand",
       "level": 0
+    },
+    {
+      "name": "Minor Illusion",
+      "level": 0
+    },
+    {
+      "name": "Booming Blade",
+      "level": 0
+    },
+    {
+      "name": "Find Familiar",
+      "level": 1
+    },
+    {
+      "name": "Silent Image",
+      "level": 1
     }
   ],
   "details": {

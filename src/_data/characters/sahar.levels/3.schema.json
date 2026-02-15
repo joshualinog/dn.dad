@@ -1,6 +1,6 @@
 {
-  "level": 1,
-  "snapshot_at": "2026-02-06T19:39:48.960Z",
+  "level": 3,
+  "snapshot_at": "2026-02-14T12:01:00.000Z",
   "name": "Sahar",
   "alignment": "Lawful Good",
   "player": {
@@ -12,7 +12,7 @@
   "classes": [
     {
       "name": "Rogue",
-      "levels": 1,
+      "levels": 3,
       "subclass": "Arcane Trickster"
     }
   ],
@@ -25,7 +25,7 @@
     "Swim": 0
   },
   "hit_points": {
-    "max": 10
+    "max": 24
   },
   "armor_class": {
     "value": 14
@@ -113,10 +113,11 @@
     }
   ],
   "spells": [
-    {
-      "name": "Sacred Flame",
-      "level": 0
-    }
+    { "name": "Mage Hand", "level": 0 },
+    { "name": "Minor Illusion", "level": 0 },
+    { "name": "Booming Blade", "level": 0 },
+    { "name": "Find Familiar", "level": 1 },
+    { "name": "Silent Image", "level": 1 }
   ],
   "details": {
     "personality": "Acrobatic fighter with lunar spiritual connection\nIncorporates flips and gymnastics (flavor)\nBattlefield tactics over social manipulation\nPrecise and honorable"
