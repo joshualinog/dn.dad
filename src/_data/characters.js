@@ -67,5 +67,12 @@ module.exports = files.map((file) => {
     }
   }
 
+  // Add pretty-printed raw JSON so templates can display the full character object for debugging/styling
+  try {
+    parsed._raw = JSON.stringify(parsed, null, 2);
+  } catch (e) {
+    parsed._raw = String(parsed);
+  }
+
   return parsed;
 });
