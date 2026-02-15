@@ -4,11 +4,11 @@
   "species": "Locathah",
   "class": "Bard",
   "subclass": "College of Glamour",
-  "level": 2,
+  "level": 3,
   "alignment": "Neutral Good",
   "inspiration": "Ted Lasso, Tom Bombadil, Michael (your brother)",
   "ac": 15,
-  "hp": 17,
+  "hp": 24,
   "initiative": 3,
   "speed": "30 ft (swim 30 ft)",
   "proficiencyBonus": { "score": 2, "mod": "+2" },
@@ -49,8 +49,8 @@
     "mod": "+4",
     "savingThrow": "+6",
     "skills": [
-      { "name": "Performance", "mod": "+6", "proficient": true },
-      { "name": "Persuasion", "mod": "+6", "proficient": true },
+      { "name": "Performance", "mod": "+6", "proficient": true, "expert": true },
+      { "name": "Persuasion", "mod": "+6", "proficient": true, "expert": true },
       { "name": "Deception", "mod": "+6", "proficient": true }
     ]
   },
@@ -92,6 +92,18 @@
     {
       "name": "Song of Rest",
       "description": "During a short rest, creatures that hear your soothing music or oration regain an extra 1d6 hit points when spending Hit Dice to heal."
+    },
+    {
+      "name": "Expertise",
+      "description": "At 3rd level (Bard), choose two skill proficiencies to gain Expertise (double proficiency bonus). Chosen: Performance, Persuasion."
+    },
+    {
+      "name": "Mantle of Inspiration (College of Glamour)",
+      "description": "As a bonus action, grant temporary hit points and allow allies to reposition (see College of Glamour)."
+    },
+    {
+      "name": "Enthralling Performance (College of Glamour)",
+      "description": "After a performance, attempt to charm nearby creatures; useful for non-lethal social control and spectacle."
     }
   ],
   "backgroundFeature": {
@@ -152,8 +164,9 @@
     "Use your instrument as both tool and symbol of hope."
   ],
   "levelUpReminders": [
-    "Level 2: Jack of All Trades, Song of Rest, more spells (Calm Emotions, Suggestion).",
-    "Level 3: College of Glamour features (Mantle of Inspiration, Enthralling Performance).",
+    "Completed: Level 2 — Jack of All Trades, Song of Rest, more spells (Calm Emotions, Suggestion).",
+    "Completed: Level 3 — College of Glamour features (Mantle of Inspiration, Enthralling Performance); Expertise in Performance & Persuasion.",
+    "Level 4: Ability Score Improvement (consider +2 Charisma)",
     "Feats: Inspiring Leader (for mass temp HP), Resilient (Wisdom), Actor (for roleplay, disguise)."
   ]
 }

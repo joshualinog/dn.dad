@@ -1,4 +1,6 @@
 {
+  "level": 3,
+  "snapshot_at": "2026-02-15T12:00:00.000Z",
   "name": "Dahg",
   "alignment": "Neutral Good",
   "player": {
@@ -29,7 +31,6 @@
     "value": 15,
     "description": "AC = 12 + Dex modifier (use if higher than leather armor)."
   },
-  "inspiration": "Ted Lasso, Tom Bombadil, Michael (your brother)",
   "ability_scores": {
     "str": 14,
     "dex": 17,
@@ -75,68 +76,24 @@
     }
   ],
   "equipment": [
-    {
-      "name": "Leather armor"
-    },
-    {
-      "name": "Rapier or dagger"
-    },
-    {
-      "name": "Banjo/guitar/drum, Herbalism kit"
-    },
-    {
-      "name": "Diplomat’s pack, hammock, pouch of herbal teas, simple clothes, community token"
-    }
+    { "name": "Leather armor" },
+    { "name": "Rapier or dagger" },
+    { "name": "Banjo/guitar/drum, Herbalism kit" },
+    { "name": "Diplomat’s pack, hammock, pouch of herbal teas, simple clothes, community token" }
   ],
   "spells": [
-    {
-      "name": "Message",
-      "level": 0
-    },
-    {
-      "name": "Dancing Lights",
-      "level": 0
-    },
-    {
-      "name": "Minor Illusion",
-      "level": 0
-    },
-    {
-      "name": "Blade Ward",
-      "level": 0
-    },
-    {
-      "name": "Sleep",
-      "level": 1
-    },
-    {
-      "name": "Healing Word",
-      "level": 1
-    },
-    {
-      "name": "Charm Person",
-      "level": 1
-    },
-    {
-      "name": "Heroism",
-      "level": 1
-    },
-    {
-      "name": "Calm Emotions",
-      "level": 1
-    },
-    {
-      "name": "Tasha’s Hideous Laughter",
-      "level": 1
-    },
-    {
-      "name": "Faerie Fire",
-      "level": 1
-    },
-    {
-      "name": "Dissonant Whispers",
-      "level": 1
-    }
+    { "name": "Message", "level": 0 },
+    { "name": "Dancing Lights", "level": 0 },
+    { "name": "Minor Illusion", "level": 0 },
+    { "name": "Blade Ward", "level": 0 },
+    { "name": "Sleep", "level": 1 },
+    { "name": "Healing Word", "level": 1 },
+    { "name": "Charm Person", "level": 1 },
+    { "name": "Heroism", "level": 1 },
+    { "name": "Calm Emotions", "level": 1 },
+    { "name": "Tasha’s Hideous Laughter", "level": 1 },
+    { "name": "Faerie Fire", "level": 1 },
+    { "name": "Dissonant Whispers", "level": 1 }
   ],
   "details": {
     "backstory": "You can always find a place to stay by offering encouragement, music, and kindness. Communities welcome you, and you can diffuse most tensions with your joyful presence.",
