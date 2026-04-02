@@ -84,6 +84,39 @@ Qiao Lao prepares 23 spells. Focused on radiant/fire damage to counter Smith's f
   - 4th: Guardian of Faith (summon radiant defender).
   - 5th: Flame Strike (divine fire column for 70 damage).
 
+## Dice and Rolling Tips
+### Spells
+- Sacred Flame: 1d8 radiant damage (roll 1d8; Dex save DC 16 halves).
+- Fire Bolt: 1d10 fire damage (roll 1d10 + Cha mod; ranged spell attack +8).
+- Light: No roll needed (illuminate 20 ft. radius).
+- Magic Missile: 3 darts, 1d4+1 force each (auto-hit, roll 3d4+3 total).
+- Shield of Faith: No roll needed (+2 AC for 10 min).
+- Burning Hands: 3d6 fire damage (roll 3d6; Dex save DC 16 halves).
+- Misty Step: No roll needed (teleport 30 ft.).
+- Scorching Ray: 6 rays, 2d6 fire each (roll up to 12d6; Dex save DC 16 halves per ray).
+- Counterspell: Int save DC 16 (interrupt spell).
+- Fireball: 8d6 fire damage (roll 8d6; Dex save DC 16 halves).
+- Dispel Magic: No roll needed (remove magical effects).
+- Banishment: Cha save DC 16 (banish to plane for concentration).
+- Dimension Door: No roll needed (teleport 500 ft.).
+- Hold Monster: Wis save DC 16 (paralyzed on fail).
+- Sunbeam: 6d8 radiant damage (roll 6d8; Con save DC 16 halves and blinds).
+- Prismatic Wall: Various (roll 1d8 for random effect per panel).
+- Guiding Bolt: 4d6 radiant damage (roll 4d6; ranged spell attack +8, grants advantage on next attack).
+- Spiritual Weapon: 1d8 force damage (roll 1d8 + Wis mod; spell attack +6).
+- Spirit Guardians: 3d8 radiant damage (roll 3d8; Wis save DC 16 halves, area aura).
+- Guardian of Faith: Summons 60 HP defender (no roll, attacks 4d8 radiant).
+- Flame Strike: 10d6 fire + 10d6 radiant (roll 20d6 total; Dex save DC 16 halves).
+
+### Weapons
+- Dagger: 1d4 piercing (roll 1d4 + Dex mod; Dex attack +7).
+
+### Rolling Tips
+- Advantage/Disadvantage: Gain advantage on attacks/spells if blessed or guided; disadvantage if restrained or poisoned.
+- Critical Hits: Double damage dice on a natural 20 (e.g., Fire Bolt becomes 2d10).
+- Saving Throws: Roll with proficiency if applicable (e.g., Int/Wis saves +6).
+- Low Int Rule: On a 1, something silly happens—reroll or narrate a funny accident.
+
 ## Equipment
 - Spellbook.
 - Component Pouch.
@@ -97,4 +130,4 @@ Qiao Lao prepares 23 spells. Focused on radiant/fire damage to counter Smith's f
 - Save Counterspell for his Chain Lightning or Prismatic Spray. If he goes invisible, use Dispel Magic or just area-blast with Fireball.
 - Leverage divine spells like Spirit Guardians to punish him if he lands. Use low Int for fun (e.g., on a 1, accidentally cast on herself or a "minion").
 
-These sheets are balanced for an epic level 14 showdown—Smith's mobility and burst damage vs. Qiao Lao's control and radiant power. Let me know if you want adjustments, full stat blocks, or to integrate this into your GitHub repo!
+These sheets are balanced for an epic level 14 showdown—Smith's mobility and burst damage vs. Qiao Lao's control and radiant power.
