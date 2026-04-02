@@ -39,7 +39,7 @@
 - **Storm Sorcerer Features**:
   - Tempestuous Magic: As a bonus action, fly 10 ft. without provoking opportunity attacks.
   - Heart of the Storm: Resistance to lightning and thunder damage from spells.
-  - Storm's Fury: Reaction - When hit by melee attack, deal 14 thunder damage and push 20 ft. (Str save DC 17).
+  - Storm’s Fury: Reaction - When hit by melee attack, deal 14 thunder damage and push 20 ft. (Str save DC 17).
 - **Sorcerer Features**:
   - Metamagic Adept: Quickened Spell (2 sorcery points), Heightened Spell (3 sorcery points).
   - Sorcerous Restoration: Regain sorcery points on short rest.
@@ -80,6 +80,31 @@ Smith knows 20 spells total (Sorcerer spellcasting). Focused on ranged lightning
 
 - **Sorcery Points**: 14 (used for Metamagic like Quickening Chain Lightning for a bonus action cast).
 
+## Dice and Rolling Tips
+### Spells
+- Shocking Grasp: 1d8 lightning damage (roll 1d8 + Cha mod; Dex save DC 17 or no reaction).
+- Lightning Lure: 1d8 lightning damage (roll 1d8 + Cha mod; Str save DC 17 or pulled 10 ft.).
+- Burning Hands: 3d6 fire damage (roll 3d6; Dex save DC 17 halves).
+- Magic Missile: 3 darts, 1d4+1 force each (auto-hit, roll 3d4+3 total).
+- Hold Person: Wis save DC 17 (paralyzed on fail).
+- Misty Step: No roll needed (teleport 30 ft.).
+- Counterspell: Int save DC 17 (interrupt spell).
+- Lightning Bolt: 8d6 lightning (roll 8d6; Dex save DC 17 halves).
+- Greater Invisibility: No roll needed (concentration).
+- Storm Sphere: 2d6 lightning/thunder per turn (roll 2d6; Dex save DC 17 halves).
+- Cone of Cold: 8d8 cold (roll 8d8; Con save DC 17 halves).
+- Chain Lightning: 10d8 lightning (roll 10d8; Dex save DC 17 halves, leaps to 3 additional targets).
+- Prismatic Spray: Various (roll 1d8 for random effect).
+
+### Weapons
+- Integrated Crossbow (example tool weapon): 1d8 piercing (roll 1d8 + Str mod; Dex attack +7).
+
+### Rolling Tips
+- Advantage/Disadvantage: Gain advantage on attacks/spells if you have cover or are invisible; disadvantage if blinded or restrained.
+- Critical Hits: Double damage dice on a natural 20 (e.g., Burning Hands becomes 6d6).
+- Saving Throws: Roll with proficiency if applicable (e.g., Con/Cha saves +9).
+- Low Int Rule: On a 1, something silly happens—reroll or narrate a funny accident.
+
 ## Equipment
 - Integrated Shield (from Skirmisher).
 - Staff (for spellcasting focus).
@@ -90,3 +115,5 @@ Smith knows 20 spells total (Sorcerer spellcasting). Focused on ranged lightning
 - Fly immediately and stay airborne to avoid Sunbeam's line. Use Quickened Spell on Greater Invisibility for stealth, then Chain Lightning for burst damage.
 - Counter her Fireball with Shield or Misty Step. Use Storm's Fury to punish melee if she closes in.
 - Leverage low Int for comedic moments (e.g., on a 1, accidentally shock himself or a tree).
+
+These sheets are balanced for an epic level 14 showdown—Smith's mobility and burst damage vs. Qiao Lao's control and radiant power.
