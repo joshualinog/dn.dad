@@ -4,11 +4,11 @@
   "species": "Locathah",
   "class": "Bard",
   "subclass": "College of Glamour",
-  "level": 3,
+  "level": 4,
   "alignment": "Neutral Good",
   "inspiration": "Ted Lasso, Tom Bombadil, Michael (your brother)",
   "ac": 15,
-  "hp": 24,
+  "hp": 31,
   "initiative": 3,
   "speed": "30 ft (swim 30 ft)",
   "proficiencyBonus": { "score": 2, "mod": "+2" },
@@ -45,13 +45,13 @@
     ]
   },
   "charisma": {
-    "score": 18,
-    "mod": "+4",
-    "savingThrow": "+6",
+    "score": 20,
+    "mod": "+5",
+    "savingThrow": "+7",
     "skills": [
-      { "name": "Performance", "mod": "+6", "proficient": true, "expert": true },
-      { "name": "Persuasion", "mod": "+6", "proficient": true, "expert": true },
-      { "name": "Deception", "mod": "+6", "proficient": true }
+      { "name": "Performance", "mod": "+7", "proficient": true, "expert": true },
+      { "name": "Persuasion", "mod": "+7", "proficient": true, "expert": true },
+      { "name": "Deception", "mod": "+7", "proficient": true }
     ]
   },
   "equipment": {
@@ -82,7 +82,7 @@
       "description": "Charisma-based. See spell reference below."
     },
     {
-      "name": "Bardic Inspiration (d6, 4/day)",
+      "name": "Bardic Inspiration (d6, 5/day)",
       "description": "Bonus action, within 60 ft, add d6 to ability check, attack roll, or saving throw."
     },
     {
@@ -131,8 +131,7 @@
   ],
   "spells": {
     "cantrips": ["Message", "Dancing Lights", "Minor Illusion", "Blade Ward"],
-    "level1": ["Sleep", "Healing Word", "Charm Person", "Heroism", "Calm Emotions"],
-    "optional": [
+    "level1": ["Sleep", "Healing Word", "Charm Person", "Heroism", "Calm Emotions"],    "level2": ["Suggestion", "Enhance Ability", "Aid", "Zone of Truth"],    "optional": [
       "Tasha’s Hideous Laughter",
       "Faerie Fire",
       "Dissonant Whispers"
@@ -142,7 +141,7 @@
     { "name": "Rapier", "value": "+5 / 1d8+3", "notes": "Finesse, 1-handed" },
     {
       "name": "Vicious Mockery",
-      "value": "DC 14 / 1d4 psychic",
+      "value": "DC 15 / 1d4 psychic",
       "notes": "Disadvantage on next attack"
     },
     {
@@ -152,8 +151,13 @@
     },
     {
       "name": "Healing Word",
-      "value": "60 ft / 1d4+4 healing",
+      "value": "60 ft / 1d4+5 healing",
       "notes": "Bonus action"
+    },
+    {
+      "name": "Suggestion",
+      "value": "DC 15 / Concentration up to 8 hours",
+      "notes": "Magically suggest a reasonable course of action; creature follows if it fails WIS save"
     }
   ],
   "roleplayNotes": [
@@ -164,9 +168,10 @@
     "Use your instrument as both tool and symbol of hope."
   ],
   "levelUpReminders": [
-    "Completed: Level 2 — Jack of All Trades, Song of Rest, more spells (Calm Emotions, Suggestion).",
+    "Completed: Level 2 — Jack of All Trades, Song of Rest, more spells (Calm Emotions).",
     "Completed: Level 3 — College of Glamour features (Mantle of Inspiration, Enthralling Performance); Expertise in Performance & Persuasion.",
-    "Level 4: Ability Score Improvement (consider +2 Charisma)",
-    "Feats: Inspiring Leader (for mass temp HP), Resilient (Wisdom), Actor (for roleplay, disguise)."
+    "Completed: Level 4 — +2 CHA ASI (18→20, mod +4→+5); Suggestion (2nd-level spell) added.",
+    "Level 5: Font of Inspiration (regain Bardic Inspiration on short rest), Sneak Attack 3d6 (Bard).",
+    "Level 6: Countercharm, additional Expertise choices."
   ]
 }

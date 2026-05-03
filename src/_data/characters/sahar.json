@@ -4,11 +4,11 @@
   "species": "Astral Elf (Lunar Emphasis)",
   "class": "Rogue",
   "subclass": "Arcane Trickster",
-  "level": 3,
+  "level": 4,
   "alignment": "Lawful Good",
   "xp": 0,
   "ac": 14,
-  "hp": 24,
+  "hp": 31,
   "speed": "30ft",
   "proficiencyBonus": {
     "score": 2,
@@ -17,15 +17,15 @@
   "heroicInspiration": "None currently.",
   "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=400&h=600&q=80",
   "i": {
-    "score": 17,
-    "mod": "+3",
-    "savingThrow": "+5",
+    "score": 18,
+    "mod": "+4",
+    "savingThrow": "+6",
     "skills": [
-      { "name": "Investigation", "mod": "+5", "proficient": true },
-      { "name": "Arcana", "mod": "+3" },
-      { "name": "History", "mod": "+3" },
-      { "name": "Nature", "mod": "+3" },
-      { "name": "Religion", "mod": "+3" }
+      { "name": "Investigation", "mod": "+6", "proficient": true },
+      { "name": "Arcana", "mod": "+4" },
+      { "name": "History", "mod": "+4" },
+      { "name": "Nature", "mod": "+4" },
+      { "name": "Religion", "mod": "+4" }
     ]
   },
   "s": {
@@ -74,15 +74,15 @@
     ]
   },
   "intelligence": {
-    "score": 17,
-    "mod": "+3",
-    "savingThrow": "+5",
+    "score": 18,
+    "mod": "+4",
+    "savingThrow": "+6",
     "skills": [
-      { "name": "Investigation", "mod": "+5", "proficient": true },
-      { "name": "Arcana", "mod": "+3" },
-      { "name": "History", "mod": "+3" },
-      { "name": "Nature", "mod": "+3" },
-      { "name": "Religion", "mod": "+3" }
+      { "name": "Investigation", "mod": "+6", "proficient": true },
+      { "name": "Arcana", "mod": "+4" },
+      { "name": "History", "mod": "+4" },
+      { "name": "Nature", "mod": "+4" },
+      { "name": "Religion", "mod": "+4" }
     ]
   },
   "strength": {
@@ -146,7 +146,7 @@
   "languages": ["Common", "Elvish", "Thieves' Cant"],
   "spells": {
     "cantrips": ["Mage Hand", "Minor Illusion", "Booming Blade"],
-    "level1": ["Find Familiar", "Silent Image"]
+    "level1": ["Find Familiar", "Silent Image", "Lunar Wave"]
   },
   "specialAbilities": [
     {
@@ -181,6 +181,14 @@
     {
       "name": "Arcane Trickster",
       "description": "Spellcasting (Int-based). Mage Hand Legerdemain and selected cantrips/spells available at level 3."
+    },
+    {
+      "name": "Elven Accuracy (Feat)",
+      "description": "INT increased to 18. When you have advantage on an attack roll using INT (or DEX/WIS/CHA for elves), you can reroll one of the dice once — effectively triple advantage. Pairs devastatingly with Sneak Attack."
+    },
+    {
+      "name": "Lunar Wave (Homebrew — Thunderwave)",
+      "description": "1st-level spell. 15ft cube centered on Sahar. Each creature in the area makes a CON save (DC 14) or takes 2d8 thunder damage and is pushed 10ft. On success, half damage, no push. Flavored as a burst of concentrated lunar energy rather than raw sound."
     }
   ],
   "combatActions": [
@@ -223,7 +231,8 @@
   "levelUpReminders": [
     "Completed: Level 2 — Cunning Action",
     "Completed: Level 3 — Arcane Trickster (Mage Hand Legerdemain, spells)",
-    "Level 4: ASI/Feat (consider Dex to 18 or Mobile feat)",
+    "Completed: Level 4 — Elven Accuracy feat (INT 17→18), Lunar Wave spell added",
+    "Level 5: Sneak Attack becomes 3d6, Uncanny Dodge",
     "Level 6: Additional Expertise choices"
   ]
 }
